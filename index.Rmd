@@ -5,12 +5,19 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
+
 # Bem-vindo
 
 
 ![](graficos/ufc.png){#id .class width=12% height=12% } **Universidade federal de Fortaleza** | Departamento de Estatística e matemática aplicada
 
+$$\\[1in]$$
 
-Este é um livro para facilitar a vida dos Gaussianos com as metodologias de trabalhos prontos e futuramente códigos no formarto cookbook é só copiar e colar. Para isso foi feito no github com todos as informações desse livre e foi feito site para disponibiliza-lo online de formar rapida e acessivel a todos, cuide bem desse material. ![](cover.png){.cover width="250"}
+<img src="cover.png" width="250" height="328" align="right" alt="Cover image" /></a>
 
-Essas metodologias estão também no Overleaf da Gauss.
+Este é um livro para facilitar a vida dos Gaussianos com as metodologias de trabalhos prontos e futuramente códigos no formarto cookbook é só copiar e colar. Para isso foi feito no github com todos as informações desse livre e foi feito site para disponibiliza-lo online de formar rapida e acessivel a todos, cuide bem desse material. 
+
+Essas metodologias estão também no *Overleaf* da Gauss.
+
+
+
