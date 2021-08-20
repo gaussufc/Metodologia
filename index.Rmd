@@ -6,6 +6,7 @@ site: bookdown::bookdown_site
 ---
 
 
+
 # Bem-vindo
 
 
@@ -19,5 +20,7 @@ Este é um livro para facilitar a vida dos Gaussianos com as metodologias de tra
 
 Essas metodologias estão também no *Overleaf* da Gauss.
 
-
+```{r include=FALSE}
+library(kableExtra)
+```
 

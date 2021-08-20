@@ -12,3 +12,5 @@ tabela-de-contingência
 tabela-de-classes
 medidas-de-posição
 teste-de-mcnemar
+medidas-de-dispersão
+tabela-de-contingência-1

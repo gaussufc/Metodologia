@@ -1,3 +1,8 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
 # Análise Descritiva {-}
 
 
@@ -18,21 +23,29 @@ A moda pode ser definida em bimodal (quando ocorre a repetição de dois valores
 
 Temos que os Quartis são valores de divisão na qual divide os conjuntado de dados em 4 partes, na qual temos:
 
+
+
+```{=latex}
 \begin{enumerate}
     \item  Primeiro Quartil divide em $25\%$ em uma amostra ordena os valores inferiores.
     \item Segundo Quartil ou Mediana divide em $50\%$ em uma amostra ordena os valores inferiores.
     \item  Terceiro Quartil divide em $75\%$ em uma amostra ordena os valores superiores.
 \end{enumerate}
+```
+
 
 São utilizados para entender como se comporta os dados em cada quartil correspondente até aquele ponto.  
 
 
- *Intervalo interquartil(IIQ)* avalia a dispersão de dados somente depois de ordená-los em ordem crescente. O intervalo interquartil é calculado com base no cálculo de quartis, sendo o primeiro quartil (inferior), o quartil intermediário (mediana), o terceiro quartil (superior), que estão ligados ao conceito de quantil. A diferença entre o quartil superior e o quartil inferior determina o intervalo interquartil
+ **Intervalo interquartil(IIQ)** avalia a dispersão de dados somente depois de ordená-los em ordem crescente. O intervalo interquartil é calculado com base no cálculo de quartis, sendo o primeiro quartil (inferior), o quartil intermediário (mediana), o terceiro quartil (superior), que estão ligados ao conceito de quantil. A diferença entre o quartil superior e o quartil inferior determina o intervalo interquartil
 
 ## Tabela de contingência
 As tabelas de contingência são usadas para registrar observações independentes de duas ou mais variáveis aleatórias, normalmente qualitativas.
 
 Suponha que tenhamos duas variáveis de uma população, A e B, e queremos relacioná-la com outras duas variáveis C e D . Retirando-se uma amostra aleatória dessa população, uma tabela de contingência conteria as frequências em cada classe, a tabela seria da seguinte forma:
+
+
+```{=latex}
 
 \begin{table}[H]
 \centering
@@ -50,15 +63,20 @@ Variáveis & C & D   \\
 \caption{Exemplo de tabela de contingência.} 
 \end{table}
 
+```
+
+
 Em posse da tabela de contingência podemos então realizar testes para saber se há ou não independência entre variáveis.
 
-\subsection{Medidas de  Dispersão}
+## Medidas de  Dispersão
 
 
-\subsection{Tabela de contingência}
+## Tabela de contingência
 As tabelas de contingência são usadas para registrar observações independentes de duas ou mais variáveis aleatórias, normalmente qualitativas.
 
 Suponha que tenhamos duas variáveis de uma população, A e B, e queremos relacioná-la com outras duas variáveis C e D . Retirando-se uma amostra aleatória dessa população, uma tabela de contingência conteria as frequências em cada classe da seguinte forma:
+
+```{=latex}
 
 \begin{table}[H]
 \centering
@@ -75,6 +93,10 @@ Variáveis & C & D   \\
   \hline
 \end{tabular}
 \end{table}
+
+```
+
+
 
 Em posse da tabela de contingência podemos então realizar testes para saber se há ou não independência entre variáveis.
 
@@ -99,6 +121,8 @@ em que $Q \sim \chi^2(1)$, lê-se $Q$ segue uma distribuição qui-quadrado com 
 A tabela de classes é usada quando temos dados brutos provenientes de uma variável contínua, e então nós as agrupamos para a construção de uma tabela, em intervalos que também são conhecidos por classes.
 
 Suponhamos que desejamos construir K classes. O valor mínimo da nossa amostra(mín) e o máximo(máx). A partir dessas informações, calculamos a amplitude total(AT):
+
+```{=latex}
 \begin{center}
 AT = máx. – mín.    
 \end{center}
@@ -110,3 +134,6 @@ A amplitude de cada classe (h) é dada por:
 \begin{center}
     h = AT/k.
 \end{center}
+
+```
+
