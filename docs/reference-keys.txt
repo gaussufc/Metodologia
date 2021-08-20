@@ -4,3 +4,11 @@ a-caucus-race-and-a-long-tale
 bem-vindo
 análise-descritiva
 análise-de-correlação
+descritiva
+mediana
+moda
+quartil
+tabela-de-contingência
+tabela-de-classes
+medidas-de-posição
+teste-de-mcnemar
