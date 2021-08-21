@@ -14,3 +14,7 @@ medidas-de-posição
 teste-de-mcnemar
 medidas-de-dispersão
 tabela-de-contingência-1
+coeficiente-de-correlação-ponto-biserial
+correlação-linear-de-pearson
+coeficiente-de-correlação-de-spearman
+coeficiente-tau-de-kendall
