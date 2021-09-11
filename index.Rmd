@@ -19,12 +19,13 @@ header-includes:
 
 
 ![](graficos/ufc.png){#id .class width=12% height=12% } **Universidade federal de Fortaleza** | Departamento de Estatística e matemática aplicada
-
 $$\\[1in]$$
 
-<img src="cover.png" width="250" height="328" align="right" alt="Cover image" /></a>
+<img src="cover.png" width="250" height="350" align="right" alt="Cover image" /></a>
 
 Este é um livro para facilitar a vida dos Gaussianos com as metodologias para qualquer tipo de trabalhos. Para isso foi feito no github com todos as informações desse livro e foi feito site para disponibiliza-lo online de formar rapida e acessivel a todos, cuide bem desse material. 
+
+
 
 
 ```{r include=FALSE}
