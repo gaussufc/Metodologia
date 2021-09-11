@@ -1,7 +1,6 @@
 --- 
 title: "Metodologia Gauss"
 author: "Empresa Junior Gauss"
-date: "`r Sys.Date()`"
 
 site: bookdown::bookdown_site
 ---
