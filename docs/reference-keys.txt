@@ -18,3 +18,4 @@ coeficiente-de-correlação-ponto-biserial
 correlação-linear-de-pearson
 coeficiente-de-correlação-de-spearman
 coeficiente-tau-de-kendall
+coeficiente-de-cramér

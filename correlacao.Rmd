@@ -1,6 +1,6 @@
 # Análise de Correlação
 
-##Coeficiente de Cramér
+## Coeficiente de Cramér
 
 O coeficiente de Cramér é uma medida entre duas variáveis medidas numa escala categórica. Portanto pode ser aplicado em situações onde a informação se encontra distribuída por categorias nominais não ordenáveis.
 
@@ -12,29 +12,30 @@ $$
 onde n representa o número total de observações e l representa o mínimo entre o número de linhas e colunas na tabela de contingência.
 \paragraph{}A partir do valor do coeficiente de Cramér é possível efetuar um teste às hipóteses
 \begin{center} 
-$H_0: $ As variáveis são independentes; \\
+$H_0: $ As variáveis são independentes;
 $H_1: $ As variáveis não são independentes.
 \end{center}
 
 
 ## Coeficiente de Correlação Ponto Biserial
-\label{subsec:ponto}
+
 Esse coeficiente ($r_{pb}$) mede a correlação entre uma variável quantitativa e uma variável categórica binária (0,1). Ele pode variar entre -1 e 1 e é definido pela seguinte fórmula:
-\begin{center}
-    $r_{pb}  = \dfrac{M_1-M_0}{S_n}\sqrt{pq}$,
-\end{center}
 
-```{=latex}
+\[
+    r_{pb}  = \dfrac{M_1-M_0}{S_n}\sqrt{pq}
+\]
 
-\begin{itemize}
-\item $M_1$= média do grupo que recebeu o valor 1 da variável binária.
-\item $M_0$= média do grupo que recebeu o valor 0 da variável binária.
-\item $S_n$= desvio padrão da variável binária toda.
-\item p= proporção de casos do grupo "0" na variável binária.
-\item q= proporção de casos do grupo "1" na variável binária.
-\end{itemize}
 
-```
+> $M_1$= média do grupo que recebeu o valor 1 da variável binária.
+>
+> $M_0$= média do grupo que recebeu o valor 0 da variável binária.
+>
+> $S_n$= desvio padrão da variável binária toda.
+>
+> p= proporção de casos do grupo "0" na variável binária.
+>
+> q= proporção de casos do grupo "1" na variável binária.
+
 
 
 
@@ -42,22 +43,28 @@ Esse coeficiente ($r_{pb}$) mede a correlação entre uma variável quantitativa
 
 De modo geral, a quantificação do grau de associação entre duas variáveis é feita pelos chamados coeficientes de **associação** ou **correlação**.  Essas são medidas que descrevem numericamente a associação (ou dependência) entre duas variáveis. Ou seja, tais resultados nos permitem verificar se uma variável influencia de forma positiva ou negativa na outra. 
 
-Para facilitar a compreensão, esses coeficientes usualmente variam entre -1 e +1, e quanto mais próximo de 0, menos relação as variáveis possuem. A intensidade da associação linear existente entre as variáveis quantitativas pode ser determinada através do chamado Coeficiente de Correlação Linear de Pearson, e sua fórmula é definida por:\\
+Para facilitar a compreensão, esses coeficientes usualmente variam entre -1 e +1, e quanto mais próximo de 0, menos relação as variáveis possuem. A intensidade da associação linear existente entre as variáveis quantitativas pode ser determinada através do chamado Coeficiente de Correlação Linear de Pearson, e sua fórmula é definida por:
 
 $$\rho_{(x,y)} = \frac{cov{(x,y)}}{S_{x}S_{y}},$$
-em que,\\
-$\text{Cov}{(x,y)}$ - Covariância ou variância conjunta das variáveis X e Y; \\
-$S_{x} $- Desvio Padrão da variável X;\\
-$S_{Y}$ - Desvio Padrão da variável Y.\\ \\
-\quad Como dito anteriormente, o $\rho$ pode assumir valores entre -1 e +1 e neste ponto cabe algumas observações, tais como,\\
-```{=latex}
+em que ,
 
-\begin{itemize}
-\item $\rho_{(x,y)}$ = +1 significa uma correlação positiva perfeita entre as duas variáveis, ou seja, se uma aumenta a outra também aumenta;\\
-\item $\rho_{(x,y)}$ = -1 significa uma correlação negativa perfeita entre as duas variáveis, isto é, se uma aumenta a outra diminui;\\
-\item $\rho_{(x,y)}$ = 0  significa que as duas variáveis não dependem linearmente uma da outra. No entanto, pode existir uma outra dependência "não-linear". Logo, o resultado deve ser investigado por outros meios.
-\end{itemize}
-```
+> $\text{Cov}{(x,y)}$ - Covariância ou variância conjunta das variáveis X e Y; 
+>
+>$S_{x} $- Desvio Padrão da variável X
+>
+> $S_{Y}$ - Desvio Padrão da variável Y.
+>
+>  Como dito anteriormente, o $\rho$ pode assumir valores entre -1 e +1 e neste ponto cabe algumas observações, tais como
+>
+
+
+
+ >$\rho_{(x,y)}$ = +1 significa uma correlação positiva perfeita entre as duas variáveis, ou seja, se uma aumenta a outra também aumenta;
+> 
+>$\rho_{(x,y)}$ = -1 significa uma correlação negativa perfeita entre as duas variáveis, isto é, se uma aumenta a outra diminui;
+>
+> $\rho_{(x,y)}$ = 0  significa que as duas variáveis não dependem linearmente uma da outra. No entanto, pode existir uma outra dependência "não-linear". Logo, o resultado deve ser investigado por outros meios.
+>
 
 
 
