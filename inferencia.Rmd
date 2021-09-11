@@ -46,7 +46,7 @@ $$\begin{cases} H_0: \bar{x}_1 = \bar{x}_2 \\ H_1: \bar{x}_1 \neq \ \bar{x}_2 \e
 
 Suponha que o objetivo seja analisar as médias amostrais $\bar{x}_1$ e $\bar{x}_2$
 
-$$ t = \frac{\bar{x}_1-\bar{x}_2}{\sqrt{s^2(\frac{1}{n_1}+\frac{1}{n_2})}} $$
+$$t = \frac{\bar{x}_1-\bar{x}_2}{\sqrt{s^2(\frac{1}{n_1}+\frac{1}{n_2})}}$$
 
 Onde o numerador é a diferença das médias amostrais e o denominados é o desvio padrão amostral
 
@@ -58,8 +58,8 @@ As hipóteses do teste são:
 
 \[
 \begin{cases}
- H_0: & \text{As variáveis linha e coluna são independentes \\
- H_1: & \text{As variáveis linha e coluna não são independentes.  
+ H_0:  \text{As variáveis linha e coluna são independentes}; \\
+ H_1:  \text{As variáveis linha e coluna não são independentes.}  
 \end{cases}
 \]
 
@@ -82,7 +82,7 @@ E para os dados não balanceados temos:
     LSD=t_{(a,N-k)}\sqrt{QME(\frac{1}{n_i}+\frac{1}{n_j})}
 \]
 
-Em que $a^\prime=\frac{1}{2}(a/c) $ e\textbf{ c }é o número de comparações duas a duas. O quantil $t_{(a,N-k)}$ é da distribuição t-Student com parâmetros N-k. Assim a margem de erro da equação anterior depende do número de comparações.
+Em que $a^\prime=\frac{1}{2}(a/c)$ e **c** é o número de comparações duas a duas. O quantil $t_{(a,N-k)}$ é da distribuição t-Student com parâmetros $N-k$. Assim a margem de erro da equação anterior depende do número de comparações.
 
 ## Teste de Proporção
 
@@ -138,13 +138,13 @@ O teste de McNemar é utilizado em tabelas de contingência, essencialmente em t
 As hipóteses do teste são:
 
 $$ \begin{cases}
-H_0: \text{As variáveis linha e coluna possuem as mesmas proporções},\\
-H_1:  \text{As variáveis linha e coluna possuem proporções diferentes}.
+H_0: \text{As variáveis linha e coluna possuem as mesmas proporções;}\\
+H_1: \text{As variáveis linha e coluna possuem proporções diferentes.}
 \end{cases}
 $$ 
 
 A estatística do teste, $Q$, é dada por:
-$$ Q=\cfrac{(a-d)^2}{(a+d)} $$
+$$ Q=\cfrac{(a-d)^2}{(a+d)}$$
 em que $Q \sim \chi^2(1)$, lê-se $Q$ segue uma distribuição qui-quadrado com 1 grau de liberdade.
 
 ## Teste de Wilcoxon pareado 
@@ -175,7 +175,7 @@ soma dos $d_i$'s positivos e soma dos $d_i$'s negativos, respectivamente.
 Rejeitamos a hipótese nula se a probabilidade de $T^+$ tabulado para um determinado tamanho $N$ é menor ou igual ao nível de significância escolhido.
 
 
-## Teste Qui-Quadrado}
+## Teste Qui-Quadrado
 
 ### Teste Qui-Quadrado de Pearson para independência
 
@@ -201,9 +201,9 @@ As hipóteses do teste são:
 
 \[
 \begin{cases}
- \text{$H_0$: As variáveis X e Y são independentes}\\
- \text{$H_1$: As variáveis X e Y não são independentes}
-\end{cases}\\
+ H_0: \text{As variáveis X e Y são independentes};\\
+ H_1: \text{As variáveis X e Y não são independentes.}
+\end{cases}
 \]
 
 
@@ -217,15 +217,15 @@ onde:
  - $e_{ij} = \frac{\text{total da linha i} * \text{total da coluna j}}{\text{total geral}}$
 
 
-Rejeitamos $H_0$ se $\chi^2_{calculado} > \chi^2_{tabelado} $
+Rejeitamos $H_0$ se $\chi^2_{calculado} > \chi^2_{tabelado}$
 
 ### Teste Qui-Quadrado
 O teste $\chi^2$ ( Qui- Quadrado) é um dos testes usados para avaliar se há independência entre variáveis qualitativas, para isso, devemos dispor nossos dados em uma tabela de contingência, no caso em que queremos testar a hipótese de independência entre exatamente duas variáveis, utiliza-se uma tabela de dupla entrada.
 
 Para realizar o teste, iremos testar a hipótese como segue:
 \[\begin{cases} 
-  H_0:  As variáveis são independentes; \\
-  H_1:   As variáveis não são independentes.
+  H_0: \text{As variáveis são independentes;} \\
+  H_1: \text{As variáveis não são independentes.}
   \end{cases}
 \]
 Para isso, utilizaremos a estatística de teste abaixo:
@@ -236,14 +236,14 @@ Para isso, utilizaremos a estatística de teste abaixo:
 
 onde:
 
-k é o número de linhas da tabela ;
+**k** é o número de linhas da tabela ;
 
-l é o número de colunas;
+**l** é o número de colunas;
 
-$E_{ij} = n p_{ij}$  é a frequência esperada da célula ij;
+$E_{ij} = n p_{ij}$  é a frequência esperada da célula **ij**;
 
-$p_{ij}$ é a probabilidade de ocorrer uma observação na célula ij. Se as variáveis são
-independentes, espera-se que $p_{ij} = p_{i.}p_{j.}$, onde $p_i{i.} $é a probabilidade marginal correspondente a linha i e $p_{.j} $é a probabilidade marginal correspondente a coluna j;
+$p_{ij}$ é a probabilidade de ocorrer uma observação na célula **ij**. Se as variáveis são
+independentes, espera-se que $p_{ij} = p_{i.}p_{j.}$, onde $p_i{i.}$ é a probabilidade marginal correspondente a linha **i** e $p_{.j}$ é a probabilidade marginal correspondente a coluna **j**;
 
 $v = (k-1)(l-1)$ é o grau de liberdade.
 

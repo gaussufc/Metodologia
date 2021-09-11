@@ -111,7 +111,7 @@
 <li class="chapter" data-level="3.7" data-path="inferência.html"><a href="inferência.html#teste-de-post-hoc"><i class="fa fa-check"></i><b>3.7</b> Teste de Post Hoc</a></li>
 <li class="chapter" data-level="3.8" data-path="inferência.html"><a href="inferência.html#teste-de-mcnemar-1"><i class="fa fa-check"></i><b>3.8</b> Teste de McNemar</a></li>
 <li class="chapter" data-level="3.9" data-path="inferência.html"><a href="inferência.html#teste-de-wilcoxon-pareado"><i class="fa fa-check"></i><b>3.9</b> Teste de Wilcoxon pareado</a></li>
-<li class="chapter" data-level="3.10" data-path="inferência.html"><a href="inferência.html#teste-qui-quadrado"><i class="fa fa-check"></i><b>3.10</b> Teste Qui-Quadrado}</a>
+<li class="chapter" data-level="3.10" data-path="inferência.html"><a href="inferência.html#teste-qui-quadrado"><i class="fa fa-check"></i><b>3.10</b> Teste Qui-Quadrado</a>
 <ul>
 <li class="chapter" data-level="3.10.1" data-path="inferência.html"><a href="inferência.html#teste-qui-quadrado-de-pearson-para-independência"><i class="fa fa-check"></i><b>3.10.1</b> Teste Qui-Quadrado de Pearson para independência</a></li>
 <li class="chapter" data-level="3.10.2" data-path="inferência.html"><a href="inferência.html#teste-qui-quadrado-1"><i class="fa fa-check"></i><b>3.10.2</b> Teste Qui-Quadrado</a></li>
@@ -175,7 +175,7 @@ n é o tamanho da nossa amostra.</p>
 <p>Assim, testa-se a hipótese como segue:</p>
 <p><span class="math display">\[\begin{cases} H_0: \bar{x}_1 = \bar{x}_2 \\ H_1: \bar{x}_1 \neq \ \bar{x}_2 \end{cases}\]</span></p>
 <p>Suponha que o objetivo seja analisar as médias amostrais <span class="math inline">\(\bar{x}_1\)</span> e <span class="math inline">\(\bar{x}_2\)</span></p>
-<p><span class="math display">\[ t = \frac{\bar{x}_1-\bar{x}_2}{\sqrt{s^2(\frac{1}{n_1}+\frac{1}{n_2})}} \]</span></p>
+<p><span class="math display">\[t = \frac{\bar{x}_1-\bar{x}_2}{\sqrt{s^2(\frac{1}{n_1}+\frac{1}{n_2})}}\]</span></p>
 <p>Onde o numerador é a diferença das médias amostrais e o denominados é o desvio padrão amostral</p>
 </div>
 <div id="teste-exato-de-fisher" class="section level2" number="3.4">
@@ -184,8 +184,8 @@ n é o tamanho da nossa amostra.</p>
 <p>As hipóteses do teste são:</p>
 <p><span class="math display">\[
 \begin{cases}
- H_0: &amp; \text{As variáveis linha e coluna são independentes \\
- H_1: &amp; \text{As variáveis linha e coluna não são independentes.  
+ H_0:  \text{As variáveis linha e coluna são independentes}; \\
+ H_1:  \text{As variáveis linha e coluna não são independentes.}  
 \end{cases}
 \]</span></p>
 <p>A estatística de teste, apresentada por Fisher (1934), propõe que a distribuição de probabilidade das frequências de quaisquer tabelas de contingência sejam substituídas pela probabilidade da distribuição das mesmas frequências. Considerando a Tabela , arranjada de modo que <span class="math inline">\(n_{1.}\leq n_{.1}\leq n_{.2}\leq n_{2.}\)</span>, temos uma distribuição de probabilidade hipergeométrica para a única frequência de valor independente, <span class="math inline">\(o_{11}\)</span>, a partir de,</p>
@@ -203,7 +203,7 @@ E para os dados não balanceados temos:</p>
 <p><span class="math display">\[
     LSD=t_{(a,N-k)}\sqrt{QME(\frac{1}{n_i}+\frac{1}{n_j})}
 \]</span></p>
-<p>Em que $a^=(a/c) $ eé o número de comparações duas a duas. O quantil <span class="math inline">\(t_{(a,N-k)}\)</span> é da distribuição t-Student com parâmetros N-k. Assim a margem de erro da equação anterior depende do número de comparações.</p>
+<p>Em que <span class="math inline">\(a^\prime=\frac{1}{2}(a/c)\)</span> e <strong>c</strong> é o número de comparações duas a duas. O quantil <span class="math inline">\(t_{(a,N-k)}\)</span> é da distribuição t-Student com parâmetros <span class="math inline">\(N-k\)</span>. Assim a margem de erro da equação anterior depende do número de comparações.</p>
 </div>
 <div id="teste-de-proporção" class="section level2" number="3.6">
 <h2><span class="header-section-number">3.6</span> Teste de Proporção</h2>
@@ -250,12 +250,12 @@ Onde C é o número de comparações, então dessa forma temos que:</p>
 <p>O teste de McNemar é utilizado em tabelas de contingência, essencialmente em tabelas <span class="math inline">\((2\times2)\)</span>, com dados pareados para comparar frequências marginais, que em outras palavras significa que o teste compara se houve mudança nas proporções no objeto de estudo antes e depois de uma intervenção.</p>
 <p>As hipóteses do teste são:</p>
 <p><span class="math display">\[ \begin{cases}
-H_0: \text{As variáveis linha e coluna possuem as mesmas proporções},\\
-H_1:  \text{As variáveis linha e coluna possuem proporções diferentes}.
+H_0: \text{As variáveis linha e coluna possuem as mesmas proporções;}\\
+H_1: \text{As variáveis linha e coluna possuem proporções diferentes.}
 \end{cases}
 \]</span></p>
 <p>A estatística do teste, <span class="math inline">\(Q\)</span>, é dada por:
-<span class="math display">\[ Q=\cfrac{(a-d)^2}{(a+d)} \]</span>
+<span class="math display">\[ Q=\cfrac{(a-d)^2}{(a+d)}\]</span>
 em que <span class="math inline">\(Q \sim \chi^2(1)\)</span>, lê-se <span class="math inline">\(Q\)</span> segue uma distribuição qui-quadrado com 1 grau de liberdade.</p>
 </div>
 <div id="teste-de-wilcoxon-pareado" class="section level2" number="3.9">
@@ -281,7 +281,7 @@ soma dos <span class="math inline">\(d_i\)</span>’s positivos e soma dos <span
 <p>Rejeitamos a hipótese nula se a probabilidade de <span class="math inline">\(T^+\)</span> tabulado para um determinado tamanho <span class="math inline">\(N\)</span> é menor ou igual ao nível de significância escolhido.</p>
 </div>
 <div id="teste-qui-quadrado" class="section level2" number="3.10">
-<h2><span class="header-section-number">3.10</span> Teste Qui-Quadrado}</h2>
+<h2><span class="header-section-number">3.10</span> Teste Qui-Quadrado</h2>
 <div id="teste-qui-quadrado-de-pearson-para-independência" class="section level3" number="3.10.1">
 <h3><span class="header-section-number">3.10.1</span> Teste Qui-Quadrado de Pearson para independência</h3>
 <p>O teste de independência Qui-Quadrado é usado para descobrir se existe uma associação entre a variável de linha e a variável de coluna em uma tabela de contingência construído à partir de dados da amostra. A hipótese nula é de que as variáveis não estão associadas, em outras palavras, eles são independentes. A hipótese alternativa é de que as variáveis estão associadas, ou dependentes.</p>
@@ -298,38 +298,37 @@ soma dos <span class="math inline">\(d_i\)</span>’s positivos e soma dos <span
 <p>As hipóteses do teste são:</p>
 <p><span class="math display">\[
 \begin{cases}
- \text{$H_0$: As variáveis X e Y são independentes}\\
- \text{$H_1$: As variáveis X e Y não são independentes}
-\end{cases}\\
+ H_0: \text{As variáveis X e Y são independentes};\\
+ H_1: \text{As variáveis X e Y não são independentes.}
+\end{cases}
 \]</span></p>
-<p><span class="math display">\[\\[1in]\]</span></p>
 <p>A Estatística do teste é dada por:</p>
 <p><span class="math display">\[\chi^2 = \sum_i\sum_j\frac{(o_{ij} - e_{ij}^2)}{e_{ij}}\]</span></p>
 <p>onde:
 - <span class="math inline">\(o_{ij}\)</span> é o valor observado na célula;
 - <span class="math inline">\(e_{ij}\)</span> é o valor esperado
 - <span class="math inline">\(e_{ij} = \frac{\text{total da linha i} * \text{total da coluna j}}{\text{total geral}}\)</span></p>
-<p>Rejeitamos <span class="math inline">\(H_0\)</span> se $^2_{calculado} &gt; ^2_{tabelado} $</p>
+<p>Rejeitamos <span class="math inline">\(H_0\)</span> se <span class="math inline">\(\chi^2_{calculado} &gt; \chi^2_{tabelado}\)</span></p>
 </div>
 <div id="teste-qui-quadrado-1" class="section level3" number="3.10.2">
 <h3><span class="header-section-number">3.10.2</span> Teste Qui-Quadrado</h3>
 <p>O teste <span class="math inline">\(\chi^2\)</span> ( Qui- Quadrado) é um dos testes usados para avaliar se há independência entre variáveis qualitativas, para isso, devemos dispor nossos dados em uma tabela de contingência, no caso em que queremos testar a hipótese de independência entre exatamente duas variáveis, utiliza-se uma tabela de dupla entrada.</p>
 <p>Para realizar o teste, iremos testar a hipótese como segue:
 <span class="math display">\[\begin{cases} 
-  H_0:  As variáveis são independentes; \\
-  H_1:   As variáveis não são independentes.
+  H_0: \text{As variáveis são independentes;} \\
+  H_1: \text{As variáveis não são independentes.}
   \end{cases}
 \]</span>
 Para isso, utilizaremos a estatística de teste abaixo:</p>
 <p><span class="math display">\[
  \mathbf{\chi^2_v}  =  \dfrac{\sum_{\substack{i=1}}^{k} \sum_{\substack{i=1}}^{l}(O_{ij}-E_{ij})^2}{E_{ij}}
 \]</span></p>
-<p>onde:
-k é o número de linhas da tabela ;</p>
-<p>l é o número de colunas;</p>
-<p><span class="math inline">\(E_{ij} = n p_{ij}\)</span> é a frequência esperada da célula ij;</p>
-<p><span class="math inline">\(p_{ij}\)</span> é a probabilidade de ocorrer uma observação na célula ij. Se as variáveis são
-independentes, espera-se que <span class="math inline">\(p_{ij} = p_{i.}p_{j.}\)</span>, onde $p_i{i.} $é a probabilidade marginal correspondente a linha i e $p_{.j} $é a probabilidade marginal correspondente a coluna j;</p>
+<p>onde:</p>
+<p><strong>k</strong> é o número de linhas da tabela ;</p>
+<p><strong>l</strong> é o número de colunas;</p>
+<p><span class="math inline">\(E_{ij} = n p_{ij}\)</span> é a frequência esperada da célula <strong>ij</strong>;</p>
+<p><span class="math inline">\(p_{ij}\)</span> é a probabilidade de ocorrer uma observação na célula <strong>ij</strong>. Se as variáveis são
+independentes, espera-se que <span class="math inline">\(p_{ij} = p_{i.}p_{j.}\)</span>, onde <span class="math inline">\(p_i{i.}\)</span> é a probabilidade marginal correspondente a linha <strong>i</strong> e <span class="math inline">\(p_{.j}\)</span> é a probabilidade marginal correspondente a coluna <strong>j</strong>;</p>
 <p><span class="math inline">\(v = (k-1)(l-1)\)</span> é o grau de liberdade.</p>
 <p>Assim como nos demais testes de hipóteses, rejeitaremos <span class="math inline">\(H_0\)</span> caso a probabilidade encontrada seja menor do que o nível de significância estipulado.</p>
 <p>Porém, esse teste apresenta problemas quando temos um número de observações considerado pequeno - geralmente considera-se “pequeno” um tamanho amostral menor do que 40 unidades - ou quando temos em uma das caselas de cruzamento um número esperado menor do que 5. Nesses casos, utiliza-se uma correção para uma melhor estimação.</p>
