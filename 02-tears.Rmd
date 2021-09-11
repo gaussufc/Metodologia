@@ -1,8 +1,8 @@
 ---
 output:
   html_document: default
-  pdf_document: default
----
+  pdf_document: pdf_book()
+ ---
 # Análise Descritiva {-}
 
 
@@ -24,14 +24,11 @@ A moda pode ser definida em bimodal (quando ocorre a repetição de dois valores
 Temos que os Quartis são valores de divisão na qual divide os conjuntado de dados em 4 partes, na qual temos:
 
 
+1. Primeiro Quartil divide em $25\%$ em uma amostra ordena os valores inferiores.
+2. Segundo Quartil ou Mediana divide em $50\%$ em uma amostra ordena os valores inferiores.
+3.  Terceiro Quartil divide em $75\%$ em uma amostra ordena os valores superiores.
 
-```{=latex}
-\begin{enumerate}
-    \item  Primeiro Quartil divide em $25\%$ em uma amostra ordena os valores inferiores.
-    \item Segundo Quartil ou Mediana divide em $50\%$ em uma amostra ordena os valores inferiores.
-    \item  Terceiro Quartil divide em $75\%$ em uma amostra ordena os valores superiores.
-\end{enumerate}
-```
+
 
 
 São utilizados para entender como se comporta os dados em cada quartil correspondente até aquele ponto.  
@@ -44,61 +41,18 @@ As tabelas de contingência são usadas para registrar observações independent
 
 Suponha que tenhamos duas variáveis de uma população, A e B, e queremos relacioná-la com outras duas variáveis C e D . Retirando-se uma amostra aleatória dessa população, uma tabela de contingência conteria as frequências em cada classe, a tabela seria da seguinte forma:
 
-
-```{=latex}
-
-\begin{table}[H]
-\centering
-\begin{tabular}{c|cc}
-\hline
- & \multicolumn{2}{c}{Variáveis} \\
-Variáveis & C & D   \\ 
-  \hline
-  A & 5 & 3 \\
-  B & 3 & 49 \\ 
-   \hline
-  Total & 8 & 52  \\ 
-  \hline
-\end{tabular}
-\caption{Exemplo de tabela de contingência.} 
-\end{table}
-
-```
+|           | Variáveis                          |
+|-----------|-------------------------------|----|
+| Variáveis | C                             | D  |
+| A         | 5                             | 3  |
+| B         | 3                             | 49 |
+| Total     | 8                             | 52 |
 
 
 Em posse da tabela de contingência podemos então realizar testes para saber se há ou não independência entre variáveis.
 
 ## Medidas de  Dispersão
 
-
-## Tabela de contingência
-As tabelas de contingência são usadas para registrar observações independentes de duas ou mais variáveis aleatórias, normalmente qualitativas.
-
-Suponha que tenhamos duas variáveis de uma população, A e B, e queremos relacioná-la com outras duas variáveis C e D . Retirando-se uma amostra aleatória dessa população, uma tabela de contingência conteria as frequências em cada classe da seguinte forma:
-
-```{=latex}
-
-\begin{table}[H]
-\centering
-\caption{Exemplo de tabela de contingência.}
-\begin{tabular}{c|cc}
-\hline
- & \multicolumn{2}{c}{Variáveis} \\
-Variáveis & C & D   \\ 
-  \hline
-  A & 5 & 3 \\
-  B & 3 & 49 \\ 
-   \hline
-  Total & 8 & 52  \\ 
-  \hline
-\end{tabular}
-\end{table}
-
-```
-
-
-
-Em posse da tabela de contingência podemos então realizar testes para saber se há ou não independência entre variáveis.
 
 ## Teste de McNemar 
 O teste de McNemar é utilizado em tabelas de contingência, essencialmente em tabelas $(2\times2)$, com dados pareados para comparar frequências marginais, que em 'outras palavras significa que o teste compara se houve mudança nas proporções no objeto de estudo antes e depois de uma intervenção. 
@@ -122,18 +76,17 @@ A tabela de classes é usada quando temos dados brutos provenientes de uma vari�
 
 Suponhamos que desejamos construir K classes. O valor mínimo da nossa amostra(mín) e o máximo(máx). A partir dessas informações, calculamos a amplitude total(AT):
 
-```{=latex}
-\begin{center}
-AT = máx. – mín.    
-\end{center}
-Como o número de classes (k) é dada por:
-\begin{center}
-    k = 1+3,3$\log(n)$.
-\end{center}
-A amplitude de cada classe (h) é dada por:
-\begin{center}
-    h = AT/k.
-\end{center}
 
-```
+\[ \text{AT = máx – mín.}    
+\]
+Como o número de classes (k) é dada por:
+\[
+    k = 1+3,3$\log(n)$.
+\]
+
+A amplitude de cada classe (h) é dada por:
+
+\[
+    h = \frac{AT}{k}.
+\]  
 
