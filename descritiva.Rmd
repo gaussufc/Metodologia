@@ -35,6 +35,8 @@ São utilizados para entender como se comporta os dados em cada quartil correspo
 
 
  **Intervalo interquartil(IIQ)** avalia a dispersão de dados somente depois de ordená-los em ordem crescente. O intervalo interquartil é calculado com base no cálculo de quartis, sendo o primeiro quartil (inferior), o quartil intermediário (mediana), o terceiro quartil (superior), que estão ligados ao conceito de quantil. A diferença entre o quartil superior e o quartil inferior determina o intervalo interquartil
+ 
+## Medidas de  Dispersão
 
 ## Tabela de contingência
 As tabelas de contingência são usadas para registrar observações independentes de duas ou mais variáveis aleatórias, normalmente qualitativas.
@@ -51,10 +53,10 @@ Suponha que tenhamos duas variáveis de uma população, A e B, e queremos relac
 
 Em posse da tabela de contingência podemos então realizar testes para saber se há ou não independência entre variáveis.
 
-## Medidas de  Dispersão
 
 
-## Teste de McNemar 
+
+### Teste de McNemar 
 O teste de McNemar é utilizado em tabelas de contingência, essencialmente em tabelas $(2\times2)$, com dados pareados para comparar frequências marginais, que em 'outras palavras significa que o teste compara se houve mudança nas proporções no objeto de estudo antes e depois de uma intervenção. 
 
 As hipóteses do teste são:

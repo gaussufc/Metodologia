@@ -90,10 +90,12 @@
 <li class="chapter" data-level="2.6.2" data-path="análise-descritiva.html"><a href="análise-descritiva.html#moda"><i class="fa fa-check"></i><b>2.6.2</b> Moda</a></li>
 <li class="chapter" data-level="2.6.3" data-path="análise-descritiva.html"><a href="análise-descritiva.html#quartil"><i class="fa fa-check"></i><b>2.6.3</b> Quartil</a></li>
 </ul></li>
-<li class="chapter" data-level="2.7" data-path="análise-descritiva.html"><a href="análise-descritiva.html#tabela-de-contingência"><i class="fa fa-check"></i><b>2.7</b> Tabela de contingência</a></li>
-<li class="chapter" data-level="2.8" data-path="análise-descritiva.html"><a href="análise-descritiva.html#medidas-de-dispersão"><i class="fa fa-check"></i><b>2.8</b> Medidas de Dispersão</a></li>
-<li class="chapter" data-level="2.9" data-path="análise-descritiva.html"><a href="análise-descritiva.html#teste-de-mcnemar"><i class="fa fa-check"></i><b>2.9</b> Teste de McNemar</a></li>
-<li class="chapter" data-level="2.10" data-path="análise-descritiva.html"><a href="análise-descritiva.html#tabela-de-classes"><i class="fa fa-check"></i><b>2.10</b> Tabela de classes</a></li>
+<li class="chapter" data-level="2.7" data-path="análise-descritiva.html"><a href="análise-descritiva.html#medidas-de-dispersão"><i class="fa fa-check"></i><b>2.7</b> Medidas de Dispersão</a></li>
+<li class="chapter" data-level="2.8" data-path="análise-descritiva.html"><a href="análise-descritiva.html#tabela-de-contingência"><i class="fa fa-check"></i><b>2.8</b> Tabela de contingência</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="análise-descritiva.html"><a href="análise-descritiva.html#teste-de-mcnemar"><i class="fa fa-check"></i><b>2.8.1</b> Teste de McNemar</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="análise-descritiva.html"><a href="análise-descritiva.html#tabela-de-classes"><i class="fa fa-check"></i><b>2.9</b> Tabela de classes</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -139,8 +141,11 @@
 <p><strong>Intervalo interquartil(IIQ)</strong> avalia a dispersão de dados somente depois de ordená-los em ordem crescente. O intervalo interquartil é calculado com base no cálculo de quartis, sendo o primeiro quartil (inferior), o quartil intermediário (mediana), o terceiro quartil (superior), que estão ligados ao conceito de quantil. A diferença entre o quartil superior e o quartil inferior determina o intervalo interquartil</p>
 </div>
 </div>
-<div id="tabela-de-contingência" class="section level2" number="2.7">
-<h2><span class="header-section-number">2.7</span> Tabela de contingência</h2>
+<div id="medidas-de-dispersão" class="section level2" number="2.7">
+<h2><span class="header-section-number">2.7</span> Medidas de Dispersão</h2>
+</div>
+<div id="tabela-de-contingência" class="section level2" number="2.8">
+<h2><span class="header-section-number">2.8</span> Tabela de contingência</h2>
 <p>As tabelas de contingência são usadas para registrar observações independentes de duas ou mais variáveis aleatórias, normalmente qualitativas.</p>
 <p>Suponha que tenhamos duas variáveis de uma população, A e B, e queremos relacioná-la com outras duas variáveis C e D . Retirando-se uma amostra aleatória dessa população, uma tabela de contingência conteria as frequências em cada classe, a tabela seria da seguinte forma:</p>
 <table>
@@ -175,12 +180,8 @@
 </tbody>
 </table>
 <p>Em posse da tabela de contingência podemos então realizar testes para saber se há ou não independência entre variáveis.</p>
-</div>
-<div id="medidas-de-dispersão" class="section level2" number="2.8">
-<h2><span class="header-section-number">2.8</span> Medidas de Dispersão</h2>
-</div>
-<div id="teste-de-mcnemar" class="section level2" number="2.9">
-<h2><span class="header-section-number">2.9</span> Teste de McNemar</h2>
+<div id="teste-de-mcnemar" class="section level3" number="2.8.1">
+<h3><span class="header-section-number">2.8.1</span> Teste de McNemar</h3>
 <p>O teste de McNemar é utilizado em tabelas de contingência, essencialmente em tabelas <span class="math inline">\((2\times2)\)</span>, com dados pareados para comparar frequências marginais, que em ’outras palavras significa que o teste compara se houve mudança nas proporções no objeto de estudo antes e depois de uma intervenção.</p>
 <p>As hipóteses do teste são:</p>
 <p><span class="math display">\[
@@ -193,8 +194,9 @@ H_1:  \text{As variáveis linha e coluna possuem proporções diferentes}. \\
 <span class="math display">\[ Q=\cfrac{(a-d)^2}{(a+d)} \]</span>
 em que <span class="math inline">\(Q \sim \chi^2(1)\)</span>, lê-se <span class="math inline">\(Q\)</span> segue uma distribuição qui-quadrado com 1 grau de liberdade.</p>
 </div>
-<div id="tabela-de-classes" class="section level2" number="2.10">
-<h2><span class="header-section-number">2.10</span> Tabela de classes</h2>
+</div>
+<div id="tabela-de-classes" class="section level2" number="2.9">
+<h2><span class="header-section-number">2.9</span> Tabela de classes</h2>
 <p>A tabela de classes é usada quando temos dados brutos provenientes de uma variável contínua, e então nós as agrupamos para a construção de uma tabela, em intervalos que também são conhecidos por classes.</p>
 <p>Suponhamos que desejamos construir K classes. O valor mínimo da nossa amostra(mín) e o máximo(máx). A partir dessas informações, calculamos a amplitude total(AT):</p>
 <p><span class="math display">\[ \text{AT = máx – mín.}    
