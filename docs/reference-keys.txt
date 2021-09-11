@@ -35,3 +35,6 @@ teste-de-wilcoxon-pareado
 teste-qui-quadrado
 teste-qui-quadrado-de-pearson-para-independência
 teste-qui-quadrado-1
+estatística-não-paramétrica
+teste-de-wilcoxon-mann-whitney
+definição-2

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 4 Estatística Não-Paramétrica | Metodologia Gauss</title>
+  <meta name="description" content="Capítulo 4 Estatística Não-Paramétrica | Metodologia Gauss" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 4 Estatística Não-Paramétrica | Metodologia Gauss" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 4 Estatística Não-Paramétrica | Metodologia Gauss" />
+  
+  
+  
+
+<meta name="author" content="Empresa Junior Gauss" />
+
+
+<meta name="date" content="2021-09-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="inferência.html"/>
+<link rel="next" href="referências.html"/>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Metodologia</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Bem-vindo</a></li>
+<li class="chapter" data-level="2" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html"><i class="fa fa-check"></i><b>2</b> Análise de Correlação</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html#coeficiente-de-cramér"><i class="fa fa-check"></i><b>2.1</b> Coeficiente de Cramér</a></li>
+<li class="chapter" data-level="2.2" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html#coeficiente-de-correlação-ponto-biserial"><i class="fa fa-check"></i><b>2.2</b> Coeficiente de Correlação Ponto Biserial</a></li>
+<li class="chapter" data-level="2.3" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html#correlação-linear-de-pearson"><i class="fa fa-check"></i><b>2.3</b> Correlação linear de Pearson</a></li>
+<li class="chapter" data-level="2.4" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html#coeficiente-de-correlação-de-spearman"><i class="fa fa-check"></i><b>2.4</b> Coeficiente de correlação de Spearman</a></li>
+<li class="chapter" data-level="2.5" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html#coeficiente-tau-de-kendall"><i class="fa fa-check"></i><b>2.5</b> Coeficiente <span class="math inline">\(\tau\)</span> de Kendall</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="análise-descritiva.html"><a href="análise-descritiva.html"><i class="fa fa-check"></i>Análise Descritiva</a>
+<ul>
+<li class="chapter" data-level="2.6" data-path="análise-descritiva.html"><a href="análise-descritiva.html#medidas-de-posição"><i class="fa fa-check"></i><b>2.6</b> Medidas de Posição</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="análise-descritiva.html"><a href="análise-descritiva.html#mediana"><i class="fa fa-check"></i><b>2.6.1</b> Mediana</a></li>
+<li class="chapter" data-level="2.6.2" data-path="análise-descritiva.html"><a href="análise-descritiva.html#moda"><i class="fa fa-check"></i><b>2.6.2</b> Moda</a></li>
+<li class="chapter" data-level="2.6.3" data-path="análise-descritiva.html"><a href="análise-descritiva.html#quartil"><i class="fa fa-check"></i><b>2.6.3</b> Quartil</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="análise-descritiva.html"><a href="análise-descritiva.html#medidas-de-dispersão"><i class="fa fa-check"></i><b>2.7</b> Medidas de Dispersão</a></li>
+<li class="chapter" data-level="2.8" data-path="análise-descritiva.html"><a href="análise-descritiva.html#tabela-de-contingência"><i class="fa fa-check"></i><b>2.8</b> Tabela de contingência</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="análise-descritiva.html"><a href="análise-descritiva.html#teste-de-mcnemar"><i class="fa fa-check"></i><b>2.8.1</b> Teste de McNemar</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="análise-descritiva.html"><a href="análise-descritiva.html#tabela-de-classes"><i class="fa fa-check"></i><b>2.9</b> Tabela de classes</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="inferência.html"><a href="inferência.html"><i class="fa fa-check"></i><b>3</b> Inferência</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="inferência.html"><a href="inferência.html#teste-de-hipóteses"><i class="fa fa-check"></i><b>3.1</b> Teste de Hipóteses</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="inferência.html"><a href="inferência.html#definição"><i class="fa fa-check"></i><b>3.1.1</b> Definição</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="inferência.html"><a href="inferência.html#testes-de-independência"><i class="fa fa-check"></i><b>3.2</b> Testes de Independência</a></li>
+<li class="chapter" data-level="3.3" data-path="inferência.html"><a href="inferência.html#teste-t-para-amostras-independentes"><i class="fa fa-check"></i><b>3.3</b> Teste T para amostras independentes</a></li>
+<li class="chapter" data-level="3.4" data-path="inferência.html"><a href="inferência.html#teste-exato-de-fisher"><i class="fa fa-check"></i><b>3.4</b> Teste Exato de Fisher</a></li>
+<li class="chapter" data-level="3.5" data-path="inferência.html"><a href="inferência.html#teste-de-bonferroni"><i class="fa fa-check"></i><b>3.5</b> Teste de Bonferroni</a></li>
+<li class="chapter" data-level="3.6" data-path="inferência.html"><a href="inferência.html#teste-de-proporção"><i class="fa fa-check"></i><b>3.6</b> Teste de Proporção</a></li>
+<li class="chapter" data-level="3.7" data-path="inferência.html"><a href="inferência.html#teste-de-post-hoc"><i class="fa fa-check"></i><b>3.7</b> Teste de Post Hoc</a></li>
+<li class="chapter" data-level="3.8" data-path="inferência.html"><a href="inferência.html#teste-de-mcnemar-1"><i class="fa fa-check"></i><b>3.8</b> Teste de McNemar</a></li>
+<li class="chapter" data-level="3.9" data-path="inferência.html"><a href="inferência.html#teste-de-wilcoxon-pareado"><i class="fa fa-check"></i><b>3.9</b> Teste de Wilcoxon pareado</a></li>
+<li class="chapter" data-level="3.10" data-path="inferência.html"><a href="inferência.html#teste-qui-quadrado"><i class="fa fa-check"></i><b>3.10</b> Teste Qui-Quadrado</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="inferência.html"><a href="inferência.html#teste-qui-quadrado-de-pearson-para-independência"><i class="fa fa-check"></i><b>3.10.1</b> Teste Qui-Quadrado de Pearson para independência</a></li>
+<li class="chapter" data-level="3.10.2" data-path="inferência.html"><a href="inferência.html#teste-qui-quadrado-1"><i class="fa fa-check"></i><b>3.10.2</b> Teste Qui-Quadrado</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="estatística-não-paramétrica.html"><a href="estatística-não-paramétrica.html"><i class="fa fa-check"></i><b>4</b> Estatística Não-Paramétrica</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="estatística-não-paramétrica.html"><a href="estatística-não-paramétrica.html#teste-de-wilcoxon-mann-whitney"><i class="fa fa-check"></i><b>4.1</b> Teste de Wilcoxon-Mann-Whitney</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="estatística-não-paramétrica.html"><a href="estatística-não-paramétrica.html#definição-1"><i class="fa fa-check"></i><b>4.1.1</b> Definição 1</a></li>
+<li class="chapter" data-level="4.1.2" data-path="estatística-não-paramétrica.html"><a href="estatística-não-paramétrica.html#definição-2"><i class="fa fa-check"></i><b>4.1.2</b> Definição 2 :</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i><b>5</b> Referências</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Metodologia Gauss</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="estatística-não-paramétrica" class="section level1" number="4">
+<h1><span class="header-section-number">Capítulo 4</span> Estatística Não-Paramétrica</h1>
+<div id="teste-de-wilcoxon-mann-whitney" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Teste de Wilcoxon-Mann-Whitney</h2>
+<div id="definição-1" class="section level3" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Definição 1</h3>
+<p>Proposto inicialmente por Frank Wilcoxon (1945) e com contribuições de Henry B. Mann e Donald R. Whitney (1947), o teste de Wilcoxon-Mann-Whitney é um teste não paramétrico aplicado em duas amostras independentes.</p>
+<p>Esse teste é baseado nos postos dos valores obtidos combinando-se as duas amostras. Isso é feito ordenando-se esses valores, do menor para o maior, independentemente do fato de qual população cada valor provém, caso haja observações repetidas atribui-se a média dos postos correspondentes. O teste de Wilcoxon-Mann-Whitney tem como objetivo testar se as distribuições possuem a mesma medida de tendência central.</p>
+<p>Seja <span class="math inline">\(X_1\)</span>, <span class="math inline">\(X_2\)</span>, …, <span class="math inline">\(X_m\)</span> uma amostra aleatória de <span class="math inline">\(X\)</span> de modo que <span class="math inline">\(X_j\)</span>’s são independentes e identicamente distribuídos e <span class="math inline">\(Y_1\)</span>, <span class="math inline">\(Y_2\)</span>, …, <span class="math inline">\(Y_n\)</span> uma amostra aleatória de <span class="math inline">\(Y\)</span> de modo que os <span class="math inline">\(Y_i\)</span>’s são independentes e identicamente distribuídos. Além disso, suponha que os <span class="math inline">\(X_j\)</span>’s e os <span class="math inline">\(Y_i\)</span>’s são mutuamente independentes e a amostra <span class="math inline">\(Y\)</span> aquela com o menor tamanho amostral, isto é, <span class="math inline">\(n \leq m\)</span>.</p>
+<p>As possíveis hipóteses do teste são:</p>
+<ul>
+<li><span class="math inline">\(H_0\)</span>: <span class="math inline">\(\Delta=0\)</span> vs <span class="math inline">\(H_1\)</span>: <span class="math inline">\(\Delta\neq0\)</span>;</li>
+<li><span class="math inline">\(H_0\)</span>: <span class="math inline">\(\Delta=0\)</span> vs <span class="math inline">\(H_1\)</span>: <span class="math inline">\(\Delta&gt;0\)</span>;</li>
+<li><span class="math inline">\(H_0\)</span>: <span class="math inline">\(\Delta=0\)</span> vs <span class="math inline">\(H_1\)</span>: <span class="math inline">\(\Delta&lt;0\)</span>.</li>
+</ul>
+<p>em que:</p>
+<ul>
+<li><span class="math inline">\(\Delta\)</span> = Estimador da diferença das posições.</li>
+</ul>
+<p>Para estimar a diferença <span class="math inline">\(\Delta\)</span> entre as medianas das populações, consideramos todas as <span class="math inline">\(m \times n\)</span> diferenças <span class="math inline">\(y_i - x_j\)</span> ordenadas de forma crescente.</p>
+<p>O estimador <span class="math inline">\(\hat{\Delta}\)</span> associado a estatística de Wilcoxon-Mann-Whitney é definido por
+<span class="math inline">\(\hat{\Delta}= \ \hbox{mediana}\{(y_i-x_j), \ i=1,\ldots, n; j=1,\ldots,m\}\)</span>, chamado de pseudo-mediana.</p>
+<p>A estatística de teste, denotada por <span class="math inline">\(W\)</span>, é dada pelo mínimo de <span class="math inline">\(U_m\)</span> e <span class="math inline">\(U_n\)</span>
+<span class="math display">\[
+\begin{align*}
+    U_m &amp;= S_m - \frac{m(m+1)}{2} \\
+    U_n &amp;= S_n - \frac{n(n+1)}{2}
+\end{align*}
+\]</span></p>
+<p>em que:</p>
+<ul>
+<li><span class="math inline">\(S_m\)</span> = Soma dos postos relacionados a amostra <span class="math inline">\(X\)</span>;</li>
+<li><span class="math inline">\(S_n\)</span> = Soma dos postos relacionados a amostra <span class="math inline">\(Y\)</span>.</li>
+</ul>
+</div>
+<div id="definição-2" class="section level3" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Definição 2 :</h3>
+<p>O teste de Wilcoxon-Mann-whitney é um teste <strong>não-paramétrico</strong>, ou seja, é um teste usado quando temos poucas ( ou nenhuma) evidências sobre a real distribuição dos dados. Ele se utiliza de passos idênticos aos que usamos para calcular um teste de hipóteses usual.</p>
+<p>Seja <span class="math inline">\(P_1\)</span> e <span class="math inline">\(P_2\)</span> duas população das quais não temos informações sobre suas distribuições, porém, temos que seus dados são qualitativo ordinais ou quantitativos. Retira-se uma amostra de cada uma dessas populações, sendo essas independentes. O procedimento utilizado nesse teste consiste em ordenarmos essas duas amostras de forma combinada, ou seja, ordena-se esses valores sem a necessidade de levar em consideração de qual população o dado provém. Com isso, testaremos se as duas populações têm a mesma mediana, ou seja, se suas distribuições são iguais em localização.</p>
+<p>Sendo <span class="math inline">\(X_1,X_2,...,X_m\)</span> e <span class="math inline">\(Y_1,Y_2,...,Y_n\)</span>, amostras aleatórias independentes e identicamente distribuídas(i.i.d) das populações <span class="math inline">\(P_1\)</span> e <span class="math inline">\(P_2\)</span>, respectivamente. Além disso, essas amostras também serão independentes entre si, sendo essas tomadas de forma que <span class="math inline">\(n\leq m\)</span>.</p>
+<p>Sendo F e G as funções de distribuição correspondentes as populações <span class="math inline">\(P_1\)</span> e <span class="math inline">\(P_2\)</span>, respectivamente, a hipótese nula é tal como segue:
+<span class="math display">\[
+    H_0: F(t) = G(t),\text{para todo t} 
+\]</span></p>
+<p>Entretanto, podemos também considerar que Y tem a mesma distribuição de X+<span class="math inline">\(\Delta\)</span>. Perante isso, a hipótese nula será:</p>
+<p><span class="math display">\[
+    H_0: \Delta  = 0 
+\]</span></p>
+<p>Daí, como estamos interessados apenas em haver diferença entre as medianas, independentemente se essa diferença é negativa ou positiva, utilizamos como hipótese alternativa, uma hipótese bilateral, como vemos abaixo:</p>
+<p><span class="math display">\[
+    H_1: \Delta \neq 0
+\]</span></p>
+<p>Com os dados já ordenados em ordem crescente, calculamos <span class="math inline">\(S_m\)</span> e <span class="math inline">\(S_n\)</span>, que serão as somas dos postos de X e Y , respectivamente. Após isso, obteremos:</p>
+<p><span class="math display">\[
+     U_m = S_m - \dfrac{1}{2}m(m+1) \; \text{e} \; 
+   $U_n = S_n - \dfrac{1}{2}n(n+1) 
+\]</span></p>
+<p>Após isso, calcula-se a estatistica de teste W, que será o menor valor entre <span class="math inline">\(U_m\)</span> e <span class="math inline">\(U_n\)</span>.</p>
+<p>Sob <span class="math inline">\(H_0\)</span>, espera-se que tenhamos uma distribuição de postos aproximadamente igual, daí, o posto médio das duas amostras deve ser parecido.</p>
+<p>Daí,deve-se encontrar os valores críticos <span class="math inline">\(t_1\)</span> e <span class="math inline">\(t_2\)</span>, de forma que</p>
+<p><span class="math display">\[
+    P[W&lt;t_1] = P[W&gt;t_2] \approx \dfrac{\alpha}{2}
+\]</span></p>
+<p>Rejeita-se <span class="math inline">\(H_0\)</span> caso <span class="math inline">\(W_{obs}&lt;t_1\)</span> ou <span class="math inline">\(W_{obs}&gt;t_2\)</span></p>
+<p>Seu valor-p será dado por:
+<span class="math display">\[
+    2P(W&gt;W_{obs}-1,\text{ se $W_{obs}&gt;\dfrac{mn}{2}$ ou  $2P(W&lt;W_{obs})$, se $W_{obs}\leq\dfrac{mn}{2}$ }
+\]</span></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="inferência.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referências.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/gaussufc/YMetodologia/edit/master/nao_parametrica.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/gaussufc/YMetodologia/blob/master/nao_parametrica.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
