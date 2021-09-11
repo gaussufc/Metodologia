@@ -47,3 +47,5 @@ análise-de-variância-multivariada
 anova-análise-de-variância
 manova
 regressão-linear-múltipla
+multivariada
+amostragem
