@@ -20,8 +20,3 @@ Este é um livro para facilitar a vida dos Gaussianos com as metodologias para q
 
 
 
-```{r include=FALSE}
-library(kableExtra)
-library(xtable)
-```
-
