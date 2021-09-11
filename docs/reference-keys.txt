@@ -38,3 +38,12 @@ teste-qui-quadrado-1
 estatística-não-paramétrica
 teste-de-wilcoxon-mann-whitney
 definição-2
+regressão
+modelos-de-regressão
+coeficiente-de-determinação
+transformação-de-yeo-johnson
+análise-de-regressão-linear-e-correlação
+análise-de-variância-multivariada
+anova-análise-de-variância
+manova
+regressão-linear-múltipla

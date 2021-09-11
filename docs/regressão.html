@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 6 Regressão | Metodologia Gauss</title>
+  <meta name="description" content="Capítulo 6 Regressão | Metodologia Gauss" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 6 Regressão | Metodologia Gauss" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 6 Regressão | Metodologia Gauss" />
+  
+  
+  
+
+<meta name="author" content="Empresa Junior Gauss" />
+
+
+<meta name="date" content="2021-09-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="referências.html"/>
+
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Metodologia</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Bem-vindo</a></li>
+<li class="chapter" data-level="2" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html"><i class="fa fa-check"></i><b>2</b> Análise de Correlação</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html#coeficiente-de-cramér"><i class="fa fa-check"></i><b>2.1</b> Coeficiente de Cramér</a></li>
+<li class="chapter" data-level="2.2" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html#coeficiente-de-correlação-ponto-biserial"><i class="fa fa-check"></i><b>2.2</b> Coeficiente de Correlação Ponto Biserial</a></li>
+<li class="chapter" data-level="2.3" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html#correlação-linear-de-pearson"><i class="fa fa-check"></i><b>2.3</b> Correlação linear de Pearson</a></li>
+<li class="chapter" data-level="2.4" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html#coeficiente-de-correlação-de-spearman"><i class="fa fa-check"></i><b>2.4</b> Coeficiente de correlação de Spearman</a></li>
+<li class="chapter" data-level="2.5" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html#coeficiente-tau-de-kendall"><i class="fa fa-check"></i><b>2.5</b> Coeficiente <span class="math inline">\(\tau\)</span> de Kendall</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="análise-descritiva.html"><a href="análise-descritiva.html"><i class="fa fa-check"></i>Análise Descritiva</a>
+<ul>
+<li class="chapter" data-level="2.6" data-path="análise-descritiva.html"><a href="análise-descritiva.html#medidas-de-posição"><i class="fa fa-check"></i><b>2.6</b> Medidas de Posição</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="análise-descritiva.html"><a href="análise-descritiva.html#mediana"><i class="fa fa-check"></i><b>2.6.1</b> Mediana</a></li>
+<li class="chapter" data-level="2.6.2" data-path="análise-descritiva.html"><a href="análise-descritiva.html#moda"><i class="fa fa-check"></i><b>2.6.2</b> Moda</a></li>
+<li class="chapter" data-level="2.6.3" data-path="análise-descritiva.html"><a href="análise-descritiva.html#quartil"><i class="fa fa-check"></i><b>2.6.3</b> Quartil</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="análise-descritiva.html"><a href="análise-descritiva.html#medidas-de-dispersão"><i class="fa fa-check"></i><b>2.7</b> Medidas de Dispersão</a></li>
+<li class="chapter" data-level="2.8" data-path="análise-descritiva.html"><a href="análise-descritiva.html#tabela-de-contingência"><i class="fa fa-check"></i><b>2.8</b> Tabela de contingência</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="análise-descritiva.html"><a href="análise-descritiva.html#teste-de-mcnemar"><i class="fa fa-check"></i><b>2.8.1</b> Teste de McNemar</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="análise-descritiva.html"><a href="análise-descritiva.html#tabela-de-classes"><i class="fa fa-check"></i><b>2.9</b> Tabela de classes</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="inferência.html"><a href="inferência.html"><i class="fa fa-check"></i><b>3</b> Inferência</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="inferência.html"><a href="inferência.html#teste-de-hipóteses"><i class="fa fa-check"></i><b>3.1</b> Teste de Hipóteses</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="inferência.html"><a href="inferência.html#definição"><i class="fa fa-check"></i><b>3.1.1</b> Definição</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="inferência.html"><a href="inferência.html#testes-de-independência"><i class="fa fa-check"></i><b>3.2</b> Testes de Independência</a></li>
+<li class="chapter" data-level="3.3" data-path="inferência.html"><a href="inferência.html#teste-t-para-amostras-independentes"><i class="fa fa-check"></i><b>3.3</b> Teste T para amostras independentes</a></li>
+<li class="chapter" data-level="3.4" data-path="inferência.html"><a href="inferência.html#teste-exato-de-fisher"><i class="fa fa-check"></i><b>3.4</b> Teste Exato de Fisher</a></li>
+<li class="chapter" data-level="3.5" data-path="inferência.html"><a href="inferência.html#teste-de-bonferroni"><i class="fa fa-check"></i><b>3.5</b> Teste de Bonferroni</a></li>
+<li class="chapter" data-level="3.6" data-path="inferência.html"><a href="inferência.html#teste-de-proporção"><i class="fa fa-check"></i><b>3.6</b> Teste de Proporção</a></li>
+<li class="chapter" data-level="3.7" data-path="inferência.html"><a href="inferência.html#teste-de-post-hoc"><i class="fa fa-check"></i><b>3.7</b> Teste de Post Hoc</a></li>
+<li class="chapter" data-level="3.8" data-path="inferência.html"><a href="inferência.html#teste-de-mcnemar-1"><i class="fa fa-check"></i><b>3.8</b> Teste de McNemar</a></li>
+<li class="chapter" data-level="3.9" data-path="inferência.html"><a href="inferência.html#teste-de-wilcoxon-pareado"><i class="fa fa-check"></i><b>3.9</b> Teste de Wilcoxon pareado</a></li>
+<li class="chapter" data-level="3.10" data-path="inferência.html"><a href="inferência.html#teste-qui-quadrado"><i class="fa fa-check"></i><b>3.10</b> Teste Qui-Quadrado</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="inferência.html"><a href="inferência.html#teste-qui-quadrado-de-pearson-para-independência"><i class="fa fa-check"></i><b>3.10.1</b> Teste Qui-Quadrado de Pearson para independência</a></li>
+<li class="chapter" data-level="3.10.2" data-path="inferência.html"><a href="inferência.html#teste-qui-quadrado-1"><i class="fa fa-check"></i><b>3.10.2</b> Teste Qui-Quadrado</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="estatística-não-paramétrica.html"><a href="estatística-não-paramétrica.html"><i class="fa fa-check"></i><b>4</b> Estatística Não-Paramétrica</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="estatística-não-paramétrica.html"><a href="estatística-não-paramétrica.html#teste-de-wilcoxon-mann-whitney"><i class="fa fa-check"></i><b>4.1</b> Teste de Wilcoxon-Mann-Whitney</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="estatística-não-paramétrica.html"><a href="estatística-não-paramétrica.html#definição-1"><i class="fa fa-check"></i><b>4.1.1</b> Definição 1</a></li>
+<li class="chapter" data-level="4.1.2" data-path="estatística-não-paramétrica.html"><a href="estatística-não-paramétrica.html#definição-2"><i class="fa fa-check"></i><b>4.1.2</b> Definição 2 :</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i><b>5</b> Referências</a></li>
+<li class="chapter" data-level="6" data-path="regressão.html"><a href="regressão.html"><i class="fa fa-check"></i><b>6</b> Regressão</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="regressão.html"><a href="regressão.html#modelos-de-regressão"><i class="fa fa-check"></i><b>6.1</b> Modelos de Regressão</a></li>
+<li class="chapter" data-level="6.2" data-path="regressão.html"><a href="regressão.html#coeficiente-de-determinação"><i class="fa fa-check"></i><b>6.2</b> Coeficiente de Determinação</a></li>
+<li class="chapter" data-level="6.3" data-path="regressão.html"><a href="regressão.html#transformação-de-yeo-johnson"><i class="fa fa-check"></i><b>6.3</b> Transformação de Yeo-Johnson</a></li>
+<li class="chapter" data-level="6.4" data-path="regressão.html"><a href="regressão.html#análise-de-regressão-linear-e-correlação"><i class="fa fa-check"></i><b>6.4</b> Análise de Regressão Linear e Correlação</a></li>
+<li class="chapter" data-level="6.5" data-path="regressão.html"><a href="regressão.html#análise-de-variância-multivariada"><i class="fa fa-check"></i><b>6.5</b> Análise de Variância Multivariada</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="regressão.html"><a href="regressão.html#anova-análise-de-variância"><i class="fa fa-check"></i><b>6.5.1</b> (ANOVA) Análise de variância</a></li>
+<li class="chapter" data-level="6.5.2" data-path="regressão.html"><a href="regressão.html#manova"><i class="fa fa-check"></i><b>6.5.2</b> MANOVA</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="regressão.html"><a href="regressão.html#regressão-linear-múltipla"><i class="fa fa-check"></i><b>6.6</b> Regressão Linear Múltipla</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Metodologia Gauss</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="regressão" class="section level1" number="6">
+<h1><span class="header-section-number">Capítulo 6</span> Regressão</h1>
+<div id="modelos-de-regressão" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Modelos de Regressão</h2>
+<p>Em diversos estudos é de extrema importância verificar se duas ou mais variáveis estão relacionadas entre si. Uma alternativa é determinar um modelo matemático que expresse tal relação, e na estatística este tipo de análise é conhecido como: <strong>Análise de Regressão</strong>. Em outras palavras, modelos de regressão nos ajudam a compreender melhor como uma variável influência no comportamento de outras.</p>
+<p>Caso o interesse da pesquisa seja avaliar a relação da variável dependente (expressa por <span class="math inline">\(Y\)</span>) com apenas uma variável independente (<span class="math inline">\(X\)</span>), estamos lidando com <strong>Regressão Linear Simples</strong>. Porém, se for necessária a verificação de duas ou mais variáveis independentes, temos um caso de <strong>Regressão Linear Múltipla</strong>.</p>
+<p>Os modelos de regressão múltipla são construídos pelos seguintes passos:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Seleção de variáveis:</strong> a priori, não sabemos quais são as variáveis independentes que influenciam de forma mais significativa na variável resposta (dependente). O objetivo é encontrar um modelo mais parcimonioso que explica os dados, porém quanto mais variáveis no modelo, maior se torna a estimativa do erro e mais dependente o modelo fica dos dados observados. Então, devemos checar a importância das variáveis, incluindo ou excluindo-as do modelo se baseando em uma regra de decisão. Para esta seleção utiliza-se a relação das variáveis preditoras (inpedendentes) com a variável resposta (dependente), analisando sempre a relação de cada variável incluída, observando a significância da mesma.</p></li>
+<li><p><strong>Estimação dos parâmetros:</strong> a estimação dos parâmetros significa obter valores (estimativas) para os mesmos, para que possamos incluir esses resultados no modelo.</p></li>
+</ol>
+<p>3.<strong>Análise residual ou diagnóstico:</strong> auxilia no ajuste final do modelo, identificando observações que influênciam na estimação dos parâmetros e/ou mudança na reta dos ajustados.</p>
+</div>
+<div id="coeficiente-de-determinação" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Coeficiente de Determinação</h2>
+<p>Uma das formas de avaliar a qualidade do ajuste do modelo é através do coeficiente de determinação, representado por <span class="math inline">\(R^2\)</span>. Este varia entre <span class="math inline">\(0\leq R^2 \leq 1\)</span> e indica quanto o modelo foi capaz de explicar os dados coletados. Vale ressaltar que é pouco comum que tenhamos uma correlação perfeita (<span class="math inline">\(R^2=1\)</span>) na prática, porque existem muitos fatores que determinam as relações entre variáveis na vida real. O coeficiente de determinação é dado pela seguinte expressão</p>
+<p><span class="math display">\[
+\begin{eqnarray*}
+R^2=\dfrac{\bigg(\sum_{i=1}^n (x_i-\bar{x})Y_i\bigg)^2}{\sum_{i=1}^n (x_i - \bar{x})^2 \sum_{i=1}^n (Y_i - \bar{Y})^2}
+\end{eqnarray*}
+\]</span></p>
+</div>
+<div id="transformação-de-yeo-johnson" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Transformação de Yeo-Johnson</h2>
+<p>Existem situações que a variável em estudo não possui comportamento normal e para o uso da regressão linear múltipla é necessário que a suposição de normalidade seja cumprida. Uma alternativa em experimentos como esse é o uso de alguma transformação na variável resposta.</p>
+<p>A transformação de Box-Cox (1964) é amplamente utilizada, contudo essa transformação é válida apenas em variáveis positivas. Uma alternativa de transformação para variáveis que assumem valores positivos e negativos é a transformação de Yeo-Johnson (2000), essa é uma extensão da transformação de Box-Cox. Sua fórmula é definida a seguir</p>
+<p><span class="math display">\[
+\begin{eqnarray*}
+\phi^{(\lambda)}=\left\{\begin{array}{rc}
+\dfrac{(y+1)^\lambda-1}{\lambda},&amp;\mbox{para }\lambda \neq0, y \geq 0\\
+\text{log}(y+1), &amp;\mbox{para } \lambda =0 , y\geq 0 \\
+-\dfrac{(1-y)^{2-\lambda}-1}{2-\lambda},  &amp;\mbox{para } \lambda \neq2 , y &lt; 0 \\
+-\text{log}(1-y), &amp;\mbox{para } \lambda =2 , y &lt; 0 
+\end{array}\right.
+\end{eqnarray*}
+\]</span></p>
+<p>em que <span class="math inline">\(\lambda\)</span> é um parâmetro desconhecido e <span class="math inline">\(\phi^{(\lambda)}\)</span> é a observação transformada.</p>
+</div>
+<div id="análise-de-regressão-linear-e-correlação" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Análise de Regressão Linear e Correlação</h2>
+<p>A análise de regressão linear consiste em estudar a relação de uma variável dependente(variável resposta) e variáveis independentes(variáveis de regressão), essas variáveis são denominadas variável <span class="math inline">\(y\)</span> e <span class="math inline">\(x\)</span>, respectivamente, e essa relação é expressa na forma funcional abaixo descrita a seguir:</p>
+<p><span class="math display">\[Y = \beta_{0} + \beta_{1} X_{1} + \ldots + \beta_{p} X_{n}\]</span></p>
+<p>Escrever a variável resposta em função da(s) variável(eis) <span class="math inline">\(x\)</span> implica dizer que existe uma relação linear entre elas. Cada coeficiente do modelo é estimado por meio do método de máxima verossimilhança, o qual obtém-se estimadores com boas propriedades. Quanto a adequabilidade do modelo pode-se testar a partir da análise de variância (ANOVA) se o modelo é adequado ou não. Para isso as hipóteses testadas são</p>
+<p><span class="math display">\[
+\begin{cases}
+ H_0: \beta_{0} = \beta_{1} = \ldots = \beta_{p} = 0; \\
+ H_1: \text{Pelo menos um} \beta_{j} \; \text{é diferente de zero.}
+\end{cases} \]</span></p>
+<p>A estatística F é usada para testar essas hipóteses. Tomando a seguinte regra de decisão se a estatística <span class="math inline">\(F_{calculada} &gt; F_{tabelada}\)</span> rejeita-se a hipótese <span class="math inline">\(H_{0}\)</span>. Ou se o valor-p for obtido no teste for menor que o alfa de <span class="math inline">\(5\%\)</span>.</p>
+<p>Rejeitar a hipótese <span class="math inline">\(H_{0}\)</span> significa que as co-variáveis são significativas para explicar linearmente a variável resposta.</p>
+</div>
+<div id="análise-de-variância-multivariada" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> Análise de Variância Multivariada</h2>
+<div id="anova-análise-de-variância" class="section level3" number="6.5.1">
+<h3><span class="header-section-number">6.5.1</span> (ANOVA) Análise de variância</h3>
+<p>Assim como o teste t, essa técnica estatística compara a média de grupos, entretanto, enquanto o teste t focaliza em dois grupos, por outro lado, a ANOVA compara três ou mais grupos e, adicionalmente, assume que as variâncias são iguais em todos os grupos (homocedasticidade).</p>
+<p>A fim de testar a igualdade das médias, utiliza-se a seguinte estatística de teste:</p>
+<p><span class="math display">\[F = \frac{S^2_{entre}}{S^2_{dentro}}\]</span></p>
+<p>Onde o numerador é a variância entre os grupos e o denominador a variância dentro dos grupos para <span class="math inline">\(k-1\)</span> e <span class="math inline">\(n - k\)</span> graus de liberdade, respectivamente, em que <span class="math inline">\(k\)</span> é o número de grupos e <span class="math inline">\(n\)</span> o número de observações.</p>
+</div>
+<div id="manova" class="section level3" number="6.5.2">
+<h3><span class="header-section-number">6.5.2</span> MANOVA</h3>
+<p>A análise de variância multivariada (MANOVA) é uma forma generalizada da análise de variância (ANOVA). É utilizada em casos onde existem duas ou mais variáveis dependentes. A ferramenta MANOVA permite comparar se há diferença entre os tratamentos para as variáveis respostas. É utilizada a estatística Wilks para testar a igualdade entre os tratamentos, as hipóteses do teste são</p>
+<p><span class="math display">\[\begin{cases}
+  H_0: \mu_{1}=\mu_{2}=\ldots=\mu_{k};    \\
+  H_1: \text{pelo menos duas são diferentes.}
+\end{cases}
+ \]</span></p>
+<p>em que $ _{i} $ , <span class="math inline">\(i = 1,2,\ldots,k\)</span> são as médias dos tratamentos.
+A estatística <span class="math inline">\(\Lambda^{*}\)</span> foi originalmente proposta por Wilks e corresponde a uma forma equivalente do teste F da hipótese de ausência de efeito de tratamento do caso uni-variado. Que é dada por:</p>
+<p><span class="math display">\[ \Lambda^{*} = \dfrac{|E|}{|H|+|E|}\]</span></p>
+<p>Onde, o determinante da soma do quadrado dos erros e dos produtos cruzados, a matriz W é dividida pelo determinante da soma total de quadrados e matriz de produtos cruzados T = H + E. Se H é grande em relação a E, então | H + E | será grande em relação a | E |. Assim, vamos rejeitar a hipótese nula quanto menor for a estatística de Wilks (perto de zero).</p>
+</div>
+</div>
+<div id="regressão-linear-múltipla" class="section level2" number="6.6">
+<h2><span class="header-section-number">6.6</span> Regressão Linear Múltipla</h2>
+<p>Podemos definir um modelo de regressão linear múltipla da seguinte maneira:
+<span class="math display">\[ 
+\begin{eqnarray*}
+Y= \beta_0 + \boldsymbol{\beta}_j\boldsymbol{X}_j+\boldsymbol{\varepsilon}_i,\ i=1,...,n,
+\end{eqnarray*} \]</span></p>
+<p>em que <span class="math inline">\(j=1,...,p\)</span> e <span class="math inline">\(p\)</span> é o número de parâmetros do modelo.</p>
+<ul>
+<li><span class="math inline">\(Y\)</span> é um vetor <span class="math inline">\(n\times 1\)</span> correspondente a variável resposta do estudo;</li>
+<li><span class="math inline">\(\beta_0\)</span> e <span class="math inline">\(\boldsymbol{\beta}\)</span> correspondem aos parâmetros do modelo, e <span class="math inline">\(\boldsymbol{\beta}\)</span> é um vetor <span class="math inline">\(p\times 1\)</span>;</li>
+<li><span class="math inline">\(\boldsymbol{X}\)</span> é a matriz de planejamento <span class="math inline">\(n\times p\)</span> correspondente às variáveis independentes do modelo;</li>
+<li><span class="math inline">\(\boldsymbol{\varepsilon}_i\)</span> corresponde ao erro experimental, do qual não podemos controlar. Também é conhecido como resíduo.</li>
+</ul>
+<p>É importante ressaltar que neste relatório iremos expressar qualquer matriz ou vetor por letras em negrito. Além disso, para o uso desses modelos é preciso que algumas suposições sejam aceitas, tais como:</p>
+<ul>
+<li>Os erros (ou resíduos) devem seguir uma distribuição Normal e serem independentes;</li>
+<li>Os erros devem possuir médias iguais a zero e serem homocedásticos (variâncias constantes para cada indivíduo).</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="referências.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/gaussufc/YMetodologia/edit/master/regressao.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/gaussufc/YMetodologia/blob/master/regressao.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
