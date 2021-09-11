@@ -4,13 +4,6 @@ author: "Empresa Junior Gauss"
 date: "`r Sys.Date()`"
 
 site: bookdown::bookdown_site
-header-includes:
-- \usepackage{caption}
-- \usepackage{scalefnt}	   
-- \usepackage{booktabs}	   
-- \usepackage{multicol} 
-- \usepackage{array}     
-- \usepackage{multirow}
 ---
 
 
