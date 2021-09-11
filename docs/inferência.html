@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 3 Inferência | Metodologia Gauss</title>
+  <meta name="description" content="Capítulo 3 Inferência | Metodologia Gauss" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 3 Inferência | Metodologia Gauss" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 3 Inferência | Metodologia Gauss" />
+  
+  
+  
+
+<meta name="author" content="Empresa Junior Gauss" />
+
+
+<meta name="date" content="2021-09-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="análise-descritiva.html"/>
+<link rel="next" href="referências.html"/>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Metodologia</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Bem-vindo</a></li>
+<li class="chapter" data-level="2" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html"><i class="fa fa-check"></i><b>2</b> Análise de Correlação</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html#coeficiente-de-cramér"><i class="fa fa-check"></i><b>2.1</b> Coeficiente de Cramér</a></li>
+<li class="chapter" data-level="2.2" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html#coeficiente-de-correlação-ponto-biserial"><i class="fa fa-check"></i><b>2.2</b> Coeficiente de Correlação Ponto Biserial</a></li>
+<li class="chapter" data-level="2.3" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html#correlação-linear-de-pearson"><i class="fa fa-check"></i><b>2.3</b> Correlação linear de Pearson</a></li>
+<li class="chapter" data-level="2.4" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html#coeficiente-de-correlação-de-spearman"><i class="fa fa-check"></i><b>2.4</b> Coeficiente de correlação de Spearman</a></li>
+<li class="chapter" data-level="2.5" data-path="análise-de-correlação.html"><a href="análise-de-correlação.html#coeficiente-tau-de-kendall"><i class="fa fa-check"></i><b>2.5</b> Coeficiente <span class="math inline">\(\tau\)</span> de Kendall</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="análise-descritiva.html"><a href="análise-descritiva.html"><i class="fa fa-check"></i>Análise Descritiva</a>
+<ul>
+<li class="chapter" data-level="2.6" data-path="análise-descritiva.html"><a href="análise-descritiva.html#medidas-de-posição"><i class="fa fa-check"></i><b>2.6</b> Medidas de Posição</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="análise-descritiva.html"><a href="análise-descritiva.html#mediana"><i class="fa fa-check"></i><b>2.6.1</b> Mediana</a></li>
+<li class="chapter" data-level="2.6.2" data-path="análise-descritiva.html"><a href="análise-descritiva.html#moda"><i class="fa fa-check"></i><b>2.6.2</b> Moda</a></li>
+<li class="chapter" data-level="2.6.3" data-path="análise-descritiva.html"><a href="análise-descritiva.html#quartil"><i class="fa fa-check"></i><b>2.6.3</b> Quartil</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="análise-descritiva.html"><a href="análise-descritiva.html#medidas-de-dispersão"><i class="fa fa-check"></i><b>2.7</b> Medidas de Dispersão</a></li>
+<li class="chapter" data-level="2.8" data-path="análise-descritiva.html"><a href="análise-descritiva.html#tabela-de-contingência"><i class="fa fa-check"></i><b>2.8</b> Tabela de contingência</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="análise-descritiva.html"><a href="análise-descritiva.html#teste-de-mcnemar"><i class="fa fa-check"></i><b>2.8.1</b> Teste de McNemar</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="análise-descritiva.html"><a href="análise-descritiva.html#tabela-de-classes"><i class="fa fa-check"></i><b>2.9</b> Tabela de classes</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="inferência.html"><a href="inferência.html"><i class="fa fa-check"></i><b>3</b> Inferência</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="inferência.html"><a href="inferência.html#teste-de-hipóteses"><i class="fa fa-check"></i><b>3.1</b> Teste de Hipóteses</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="inferência.html"><a href="inferência.html#definição"><i class="fa fa-check"></i><b>3.1.1</b> Definição</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="inferência.html"><a href="inferência.html#testes-de-independência"><i class="fa fa-check"></i><b>3.2</b> Testes de Independência</a></li>
+<li class="chapter" data-level="3.3" data-path="inferência.html"><a href="inferência.html#teste-t-para-amostras-independentes"><i class="fa fa-check"></i><b>3.3</b> Teste T para amostras independentes</a></li>
+<li class="chapter" data-level="3.4" data-path="inferência.html"><a href="inferência.html#teste-exato-de-fisher"><i class="fa fa-check"></i><b>3.4</b> Teste Exato de Fisher</a></li>
+<li class="chapter" data-level="3.5" data-path="inferência.html"><a href="inferência.html#teste-de-bonferroni"><i class="fa fa-check"></i><b>3.5</b> Teste de Bonferroni</a></li>
+<li class="chapter" data-level="3.6" data-path="inferência.html"><a href="inferência.html#teste-de-proporção"><i class="fa fa-check"></i><b>3.6</b> Teste de Proporção</a></li>
+<li class="chapter" data-level="3.7" data-path="inferência.html"><a href="inferência.html#teste-de-post-hoc"><i class="fa fa-check"></i><b>3.7</b> Teste de Post Hoc</a></li>
+<li class="chapter" data-level="3.8" data-path="inferência.html"><a href="inferência.html#teste-de-mcnemar-1"><i class="fa fa-check"></i><b>3.8</b> Teste de McNemar</a></li>
+<li class="chapter" data-level="3.9" data-path="inferência.html"><a href="inferência.html#teste-de-wilcoxon-pareado"><i class="fa fa-check"></i><b>3.9</b> Teste de Wilcoxon pareado</a></li>
+<li class="chapter" data-level="3.10" data-path="inferência.html"><a href="inferência.html#teste-qui-quadrado"><i class="fa fa-check"></i><b>3.10</b> Teste Qui-Quadrado}</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="inferência.html"><a href="inferência.html#teste-qui-quadrado-de-pearson-para-independência"><i class="fa fa-check"></i><b>3.10.1</b> Teste Qui-Quadrado de Pearson para independência</a></li>
+<li class="chapter" data-level="3.10.2" data-path="inferência.html"><a href="inferência.html#teste-qui-quadrado-1"><i class="fa fa-check"></i><b>3.10.2</b> Teste Qui-Quadrado</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i><b>4</b> Referências</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Metodologia Gauss</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="inferência" class="section level1" number="3">
+<h1><span class="header-section-number">Capítulo 3</span> Inferência</h1>
+<div id="teste-de-hipóteses" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Teste de Hipóteses</h2>
+<div id="definição" class="section level3" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Definição</h3>
+<p>Um teste de hipóteses estatístico é um procedimento que utilizamos para testar duas hipóteses disjuntas a respeito de um parâmetro de interesse. Utiliza-se a nomenclatura <span class="math inline">\(H_0\)</span> e <span class="math inline">\(H_1\)</span> para representar as hipóteses, as quais são chamadas de “hipótese nula” e “hipótese alternativa”, respectivamente.</p>
+<p>Quando testamos uma hipótese, podemos encontrar dois tipos de erros:
+- <strong>Erro Tipo I:</strong> Consiste em rejeitarmos a hipótese nula, dado que ela é vera dadeira. Geralmente, representa-se por <span class="math inline">\(\alpha\)</span> a probabilidade de cometer esse tipo de erro.
+- <strong>Erro Tipo II:</strong> Consiste em não rejeitarmos <span class="math inline">\(H_0\)</span>, dado que ela é falsa. Normalmente representa-se com a letra grega <span class="math inline">\(\beta\)</span> a probabilidade de cometer esse erro.</p>
+<p>Ambos os erros devem ser evitados, porém, por questões matemáticas, geralmente só podemos controlar facilmente o Erro Tipo I, por isso, devemos estabelecer as hipóteses de forma que o Erro Tipo I seja o erro mais prejudicial ao processo estudado.</p>
+<p><strong>Nível de significância:</strong> O valor de <span class="math inline">\(\alpha\)</span>, referente ao Erro Tipo I, é chamado de nível de significância, esse valor deve ser pré-estabelecido pelo pesquisador.</p>
+<p><strong>Estatística de teste:</strong> É a estatística amostral na qual basearemos seus valores para decidirmos pela rejeição ou não de <span class="math inline">\(H_0\)</span>. Essa estatística é associada ao estimador do parâmetro que se deseja testar. Por exemplo, ao queremos testar algo sobre o real valor da média populacional <span class="math inline">\(\mu\)</span> (parâmetro),quando conhece-se o valor do desvio padrão populacional (<span class="math inline">\(\sigma\)</span>) utiliza-se a a estatística de teste abaixo:</p>
+<p><span class="math display">\[
+        Z = \dfrac{\bar{X}-\mu}{\sigma/\sqrt n}
+ \]</span>
+Onde: <span class="math inline">\(\bar{X}\)</span> é a média amostral, sendo ela o <strong>estimador</strong> natural da média populacional;
+n é o tamanho da nossa amostra.</p>
+<p><strong>Região de Rejeição:</strong> É a região formada pelo conjunto de valores que levam <span class="math inline">\(H_0\)</span> a ser rejeitada. O valor que delimita essa região é denominado valor crítico. Caso o valor calculado da estatística de teste caia nessa região, rejeita-se a hipótese nula.</p>
+<p><strong>Nível descritivo ou valor-p:</strong> É o menor valor para o qual rejeita-se a hipótese nula. Quando esse valor cai na região crítica, rejeita-se <span class="math inline">\(H_0\)</span>. Para sabermos se rejeitaremos ou não <span class="math inline">\(H_0\)</span> baseado no valor-p, deve-se compará-lo com o nível de significância do teste e rejeitar <span class="math inline">\(H_0\)</span>, se aquele for menor do que este, rejeita-se <span class="math inline">\(H_0\)</span>.</p>
+</div>
+</div>
+<div id="testes-de-independência" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Testes de Independência</h2>
+<p>Como em todo teste de hipóteses, devemos estabelecer primeiro as hipóteses a serem testadas. Num teste de independência essas hipóteses são:</p>
+<ul>
+<li><p><strong>H_0:</strong> As variáveis de classificação são independentes.</p></li>
+<li><p><strong>H_1:</strong> As variáveis de classificação não são independentes.</p>
+<p>Existem vários testes de independência em que cada um desses são adequados para uma determinada situação</p></li>
+</ul>
+</div>
+<div id="teste-t-para-amostras-independentes" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Teste T para amostras independentes</h2>
+<p>O teste T é utilizado para verificar a existência de diferença entre as médias de dois grupos da mesma população. Para isso a variável independente deve ser necessariamente métrica e a variável dependente deve ser categórica.</p>
+<p>Suponha que o objetivo seja analisar as médias amostrais <span class="math inline">\(\bar{x}_1\)</span> e <span class="math inline">\(\bar{x}_2\)</span></p>
+<p>Assim, testa-se a hipótese como segue:</p>
+<p><span class="math display">\[\begin{cases} H_0: \bar{x}_1 = \bar{x}_2 \\ H_1: \bar{x}_1 \neq \ \bar{x}_2 \end{cases}\]</span></p>
+<p>Suponha que o objetivo seja analisar as médias amostrais <span class="math inline">\(\bar{x}_1\)</span> e <span class="math inline">\(\bar{x}_2\)</span></p>
+<p><span class="math display">\[ t = \frac{\bar{x}_1-\bar{x}_2}{\sqrt{s^2(\frac{1}{n_1}+\frac{1}{n_2})}} \]</span></p>
+<p>Onde o numerador é a diferença das médias amostrais e o denominados é o desvio padrão amostral</p>
+</div>
+<div id="teste-exato-de-fisher" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Teste Exato de Fisher</h2>
+<p>O Teste Exato de Fisher é utilizado para verificar se existe associação entre as variáveis linha e as variáveis coluna em uma tabela de contingência construída a partir dos dados da amostra. Embora na prática o Teste Exato de Fisher seja aplicado quando os tamanhos das amostras são pequenos, o teste é válido para todos os tamanhos amostrais.</p>
+<p>As hipóteses do teste são:</p>
+<p><span class="math display">\[
+\begin{cases}
+ H_0: &amp; \text{As variáveis linha e coluna são independentes \\
+ H_1: &amp; \text{As variáveis linha e coluna não são independentes.  
+\end{cases}
+\]</span></p>
+<p>A estatística de teste, apresentada por Fisher (1934), propõe que a distribuição de probabilidade das frequências de quaisquer tabelas de contingência sejam substituídas pela probabilidade da distribuição das mesmas frequências. Considerando a Tabela , arranjada de modo que <span class="math inline">\(n_{1.}\leq n_{.1}\leq n_{.2}\leq n_{2.}\)</span>, temos uma distribuição de probabilidade hipergeométrica para a única frequência de valor independente, <span class="math inline">\(o_{11}\)</span>, a partir de,</p>
+<p><span class="math display">\[P[X=o_{11}]=\cfrac{\displaystyle{n_{1.} \choose o_{11}} \displaystyle{n_{2.} \choose o_{21}}}{\displaystyle{n \choose n_{.1}}}=\cfrac{n_{1.}!n_{2.}!n_{.1}!n_{.2}!}{o_{11}!o_{12}!o_{21}!o_{22}!n!}\]</span></p>
+<p>O Teste Exato de Fisher consiste na determinação desta probabilidade e dos arranjos possíveis que, com os mesmos totais marginais, tenham ainda mais desvios em relação à hipótese nula <span class="math inline">\(H_0\)</span>.</p>
+</div>
+<div id="teste-de-bonferroni" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Teste de Bonferroni</h2>
+<p>O teste de bonferroni consiste na realização de um teste t para cada par de médias a uma taxa de erro por comparação (TPC) de <span class="math inline">\(a/(k/2)\)</span>. Usando esse teste, o nível de significância da família é no máximo <span class="math inline">\(a\)</span>, para qualquer média das populações. Assim o teste de Bonferroni protege a taxa de erro da família dos testes. Pode ser usado para quaisquer que sejam os dados balanceados ou não. Não é um teste exato, e assim é baseado na aproximação como primeira desigualdade de Bonferroni. Em diversos momentos ele pode ser um teste conservativo, isto é, a taxa de erro da família testes é muito menor que o nível de significância <span class="math inline">\(a\)</span>.
+Para tamanhos de amostras iguais o teste de Bonferroni considera duas médias significativamente diferentes se o valor absoluto das diferenças ultrapassar:
+<span class="math display">\[
+    LSD=t_{(a,N-k)}\sqrt{2\frac{QME}{n}}
+\]</span>
+E para os dados não balanceados temos:</p>
+<p><span class="math display">\[
+    LSD=t_{(a,N-k)}\sqrt{QME(\frac{1}{n_i}+\frac{1}{n_j})}
+\]</span></p>
+<p>Em que $a^=(a/c) $ eé o número de comparações duas a duas. O quantil <span class="math inline">\(t_{(a,N-k)}\)</span> é da distribuição t-Student com parâmetros N-k. Assim a margem de erro da equação anterior depende do número de comparações.</p>
+</div>
+<div id="teste-de-proporção" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Teste de Proporção</h2>
+<p>Temos que testar hipóteses e construir intervalos de confiança para a proporção de uma população. Supondo que uma amostra aleatória de tamanho n tenha sido retirada de uma grande população e que X são as observações, nessa amostra pertencem a uma classe de interesse. Então <span class="math inline">\(P=X/n\)</span> é um estimador da proporção <span class="math inline">\(p\)</span> da população, que pertence a essa classe, <span class="math inline">\(n\)</span> e <span class="math inline">\(p\)</span> são parâmetros da Distribuição Binomial.,em que <span class="math inline">\(n\)</span> é o tamanho amostral e <span class="math inline">\(p\)</span> a proporção.
+<strong>Para o teste bilateral:</strong></p>
+<p><span class="math display">\[
+  \begin{cases}
+  H_0: p=p_0\\
+  H_1: p \neq p_0
+  \end{cases}
+\]</span>
+A estatística de teste é:
+<span class="math display">\[Z_0=\frac{X-np_0}{\sqrt{nX/n(1-X/n)}}\]</span>
+Rejeitamos a hipótese nula se</p>
+<p><span class="math display">\[ Z_0&lt;- Z_{1-\alpha/2} \,\text{ ou }\, Z_0 &gt; Z_{1-\alpha/2} \]</span></p>
+<p><strong>Para o teste unilateral a direita:</strong>
+<span class="math display">\[
+  \begin{cases}
+  H_0: p=p_0\\
+  H_1: p &gt; p_0
+  \end{cases}
+\]</span>
+A estatística de teste é:
+<span class="math display">\[Z_0=\frac{X-np_0}{\sqrt{nX/n(1-X/n)}}\]</span>
+Rejeitamos a hipótese nula se
+<span class="math display">\[ Z_0 &gt; Z_{1-\alpha} \]</span></p>
+</div>
+<div id="teste-de-post-hoc" class="section level2" number="3.7">
+<h2><span class="header-section-number">3.7</span> Teste de Post Hoc</h2>
+<p>Análise Post Hoc é feita após a conclusão do estudo, usando o tamanho do estudo e de efeito obtidos para determinar a potência da amostra estudada, podemos dizer que são conjuntos de teste para determinar as diferenças presentes. Os testes são para comparações pareadas, projetadas afim de comparar todas as diferentes combinações dos grupos de tratamento. Observando as taxas erro, temos:</p>
+<ul>
+<li><strong>Erro tipo 1:</strong> É a probabilidade de rejeitar a hipótese nula (Ho), quando ela é verdadeira.</li>
+<li><strong>Erro tipo 2:</strong> É a probabilidade de não rejeitar a hipótese nula (Ho), quando ela é falsa.</li>
+</ul>
+<p>Probabilidade de acontecer pelo menos um erro do Tipo I em um conjunto de relações estatísticas, assumindo erroneamente que pelo menos uma das diferenças analisadas é significativamente diferente da hipótese nula.</p>
+<p><span class="math display">\[ { \alpha_{F_W}}= 1-(1- {\alpha})^c
+\]</span>
+Onde C é o número de comparações, então dessa forma temos que:</p>
+<p><span class="math display">\[ c=\frac{k*(k-1)}{2}
+\]</span></p>
+</div>
+<div id="teste-de-mcnemar-1" class="section level2" number="3.8">
+<h2><span class="header-section-number">3.8</span> Teste de McNemar</h2>
+<p>O teste de McNemar é utilizado em tabelas de contingência, essencialmente em tabelas <span class="math inline">\((2\times2)\)</span>, com dados pareados para comparar frequências marginais, que em outras palavras significa que o teste compara se houve mudança nas proporções no objeto de estudo antes e depois de uma intervenção.</p>
+<p>As hipóteses do teste são:</p>
+<p><span class="math display">\[ \begin{cases}
+H_0: \text{As variáveis linha e coluna possuem as mesmas proporções},\\
+H_1:  \text{As variáveis linha e coluna possuem proporções diferentes}.
+\end{cases}
+\]</span></p>
+<p>A estatística do teste, <span class="math inline">\(Q\)</span>, é dada por:
+<span class="math display">\[ Q=\cfrac{(a-d)^2}{(a+d)} \]</span>
+em que <span class="math inline">\(Q \sim \chi^2(1)\)</span>, lê-se <span class="math inline">\(Q\)</span> segue uma distribuição qui-quadrado com 1 grau de liberdade.</p>
+</div>
+<div id="teste-de-wilcoxon-pareado" class="section level2" number="3.9">
+<h2><span class="header-section-number">3.9</span> Teste de Wilcoxon pareado</h2>
+<p>O teste de Wilcoxon pareado é utilizado para comparar se dois grupos possuem a mesma medida de tendência central. Esse teste leva em consideração a magnitude das
+diferenças entre os pares.</p>
+<p>Seja <span class="math inline">\(d_i\)</span> o escore-diferença para qualquer par combinado, representando a diferença dos pares sobre dois tratamentos <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>, isto é, <span class="math inline">\(d_i=X_i-Y_i\)</span>. Ordena-se todos os <span class="math inline">\(d_i\)</span>’s sem considerar o sinal, posteriormente dar-se o posto 1 ao menor <span class="math inline">\(|d_i|\)</span>, posto 2 ao segundo menor, e assim sucessivamente.</p>
+<p>As possíveis hipóteses do teste são:</p>
+<ul>
+<li><span class="math inline">\(H_0\)</span>: <span class="math inline">\(d=0\)</span> vs <span class="math inline">\(H_1\)</span>: <span class="math inline">\(d \neq 0\)</span>;</li>
+<li><span class="math inline">\(H_0\)</span>: <span class="math inline">\(d=0\)</span> vs <span class="math inline">\(H_1\)</span>: <span class="math inline">\(d&gt;0\)</span>;</li>
+<li><span class="math inline">\(H_0\)</span>: <span class="math inline">\(d=0\)</span> vs <span class="math inline">\(H_1\)</span>: <span class="math inline">\(d&lt;0\)</span>.</li>
+</ul>
+<p>A hipótese nula (<span class="math inline">\(H_0\)</span>) é que os tratamentos <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> são equivalentes, isto é, eles são amostras de populações com a mesma mediana e a mesma distribuição contínua.</p>
+<p>Duas estatísticas são definidas:
+<span class="math display">\[
+    T^+=\sum_{i}d_i,
+\]</span>
+<span class="math display">\[
+    T^-=\sum_{i}d_i,
+\]</span>
+soma dos <span class="math inline">\(d_i\)</span>’s positivos e soma dos <span class="math inline">\(d_i\)</span>’s negativos, respectivamente.</p>
+<p>Rejeitamos a hipótese nula se a probabilidade de <span class="math inline">\(T^+\)</span> tabulado para um determinado tamanho <span class="math inline">\(N\)</span> é menor ou igual ao nível de significância escolhido.</p>
+</div>
+<div id="teste-qui-quadrado" class="section level2" number="3.10">
+<h2><span class="header-section-number">3.10</span> Teste Qui-Quadrado}</h2>
+<div id="teste-qui-quadrado-de-pearson-para-independência" class="section level3" number="3.10.1">
+<h3><span class="header-section-number">3.10.1</span> Teste Qui-Quadrado de Pearson para independência</h3>
+<p>O teste de independência Qui-Quadrado é usado para descobrir se existe uma associação entre a variável de linha e a variável de coluna em uma tabela de contingência construído à partir de dados da amostra. A hipótese nula é de que as variáveis não estão associadas, em outras palavras, eles são independentes. A hipótese alternativa é de que as variáveis estão associadas, ou dependentes.</p>
+<p>Para que o teste possa ser aplicado, é necessário levar em consideração algumas suposições e condições, que serão listadas a seguir:</p>
+<ol style="list-style-type: decimal">
+<li><p>Os dados devem ser derivados de contagens(frequências) para as categorias das variáveis categóricas;</p></li>
+<li><p>As frequência das células da tabela de dupla entrada devem ser independentes umas das outras;</p></li>
+<li><p>Os sujeitos contados na tabela devem ser de uma amostra aleatória extraída de uma única população;</p></li>
+<li><p>Devemos ter dados suficientes;</p></li>
+<li><p>A tabela de contingência(dupla entrada) deve conter pelo menos 5 observações em cada célula;</p></li>
+<li><p>A tabela de valores esperados não pode conter observações menores que 5</p></li>
+<li><p>O teste é aplicável tanto para a variável qualitativa quanto quantitativa.</p></li>
+</ol>
+<p>As hipóteses do teste são:</p>
+<p><span class="math display">\[
+\begin{cases}
+ \text{$H_0$: As variáveis X e Y são independentes}\\
+ \text{$H_1$: As variáveis X e Y não são independentes}
+\end{cases}\\
+\]</span></p>
+<p><span class="math display">\[\\[1in]\]</span></p>
+<p>A Estatística do teste é dada por:</p>
+<p><span class="math display">\[\chi^2 = \sum_i\sum_j\frac{(o_{ij} - e_{ij}^2)}{e_{ij}}\]</span></p>
+<p>onde:
+- <span class="math inline">\(o_{ij}\)</span> é o valor observado na célula;
+- <span class="math inline">\(e_{ij}\)</span> é o valor esperado
+- <span class="math inline">\(e_{ij} = \frac{\text{total da linha i} * \text{total da coluna j}}{\text{total geral}}\)</span></p>
+<p>Rejeitamos <span class="math inline">\(H_0\)</span> se $^2_{calculado} &gt; ^2_{tabelado} $</p>
+</div>
+<div id="teste-qui-quadrado-1" class="section level3" number="3.10.2">
+<h3><span class="header-section-number">3.10.2</span> Teste Qui-Quadrado</h3>
+<p>O teste <span class="math inline">\(\chi^2\)</span> ( Qui- Quadrado) é um dos testes usados para avaliar se há independência entre variáveis qualitativas, para isso, devemos dispor nossos dados em uma tabela de contingência, no caso em que queremos testar a hipótese de independência entre exatamente duas variáveis, utiliza-se uma tabela de dupla entrada.</p>
+<p>Para realizar o teste, iremos testar a hipótese como segue:
+<span class="math display">\[\begin{cases} 
+  H_0:  As variáveis são independentes; \\
+  H_1:   As variáveis não são independentes.
+  \end{cases}
+\]</span>
+Para isso, utilizaremos a estatística de teste abaixo:</p>
+<p><span class="math display">\[
+ \mathbf{\chi^2_v}  =  \dfrac{\sum_{\substack{i=1}}^{k} \sum_{\substack{i=1}}^{l}(O_{ij}-E_{ij})^2}{E_{ij}}
+\]</span></p>
+<p>onde:
+k é o número de linhas da tabela ;</p>
+<p>l é o número de colunas;</p>
+<p><span class="math inline">\(E_{ij} = n p_{ij}\)</span> é a frequência esperada da célula ij;</p>
+<p><span class="math inline">\(p_{ij}\)</span> é a probabilidade de ocorrer uma observação na célula ij. Se as variáveis são
+independentes, espera-se que <span class="math inline">\(p_{ij} = p_{i.}p_{j.}\)</span>, onde $p_i{i.} $é a probabilidade marginal correspondente a linha i e $p_{.j} $é a probabilidade marginal correspondente a coluna j;</p>
+<p><span class="math inline">\(v = (k-1)(l-1)\)</span> é o grau de liberdade.</p>
+<p>Assim como nos demais testes de hipóteses, rejeitaremos <span class="math inline">\(H_0\)</span> caso a probabilidade encontrada seja menor do que o nível de significância estipulado.</p>
+<p>Porém, esse teste apresenta problemas quando temos um número de observações considerado pequeno - geralmente considera-se “pequeno” um tamanho amostral menor do que 40 unidades - ou quando temos em uma das caselas de cruzamento um número esperado menor do que 5. Nesses casos, utiliza-se uma correção para uma melhor estimação.</p>
+<p>A correção indicada para esse caso é a de Yates ou de Continuidade, pela qual o valor do teste Qui-Quadrado será recalculado como se segue:</p>
+<p><span class="math display">\[
+\mathbf{\chi^2_v}  =  \dfrac{\sum_{\substack{i=1}}^{k} \sum_{\substack{i=1}}^{l}(|O_{ij}-E_{ij}|-0,5)^2}{E_{ij}}.
+\]</span></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="análise-descritiva.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referências.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/gaussufc/YMetodologia/edit/master/inferencia.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/gaussufc/YMetodologia/blob/master/inferencia.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
