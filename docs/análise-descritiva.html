@@ -77,9 +77,10 @@
 <ul>
 <li class="chapter" data-level="1.1" data-path="análise-descritiva.html"><a href="análise-descritiva.html#medidas-de-posição"><i class="fa fa-check"></i><b>1.1</b> Medidas de Posição</a>
 <ul>
-<li class="chapter" data-level="1.1.1" data-path="análise-descritiva.html"><a href="análise-descritiva.html#mediana"><i class="fa fa-check"></i><b>1.1.1</b> Mediana</a></li>
-<li class="chapter" data-level="1.1.2" data-path="análise-descritiva.html"><a href="análise-descritiva.html#moda"><i class="fa fa-check"></i><b>1.1.2</b> Moda</a></li>
-<li class="chapter" data-level="1.1.3" data-path="análise-descritiva.html"><a href="análise-descritiva.html#quartil"><i class="fa fa-check"></i><b>1.1.3</b> Quartil</a></li>
+<li class="chapter" data-level="1.1.1" data-path="análise-descritiva.html"><a href="análise-descritiva.html#média"><i class="fa fa-check"></i><b>1.1.1</b> Média</a></li>
+<li class="chapter" data-level="1.1.2" data-path="análise-descritiva.html"><a href="análise-descritiva.html#mediana"><i class="fa fa-check"></i><b>1.1.2</b> Mediana</a></li>
+<li class="chapter" data-level="1.1.3" data-path="análise-descritiva.html"><a href="análise-descritiva.html#moda"><i class="fa fa-check"></i><b>1.1.3</b> Moda</a></li>
+<li class="chapter" data-level="1.1.4" data-path="análise-descritiva.html"><a href="análise-descritiva.html#quartil"><i class="fa fa-check"></i><b>1.1.4</b> Quartil</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="análise-descritiva.html"><a href="análise-descritiva.html#medidas-de-dispersão"><i class="fa fa-check"></i><b>1.2</b> Medidas de Dispersão</a></li>
 <li class="chapter" data-level="1.3" data-path="análise-descritiva.html"><a href="análise-descritiva.html#tabela-de-contingência"><i class="fa fa-check"></i><b>1.3</b> Tabela de contingência</a>
@@ -163,17 +164,26 @@
 <h1>Análise Descritiva</h1>
 <div id="medidas-de-posição" class="section level2" number="1.1">
 <h2><span class="header-section-number">1.1</span> Medidas de Posição</h2>
-<div id="mediana" class="section level3" number="1.1.1">
-<h3><span class="header-section-number">1.1.1</span> Mediana</h3>
+<div id="média" class="section level3" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Média</h3>
+<p>Em um conjuto de dados temos um número <span class="math inline">\(n\)</span> de valores e a soma total desse conjuto de dados e a sua divisão pelo o valor de <span class="math inline">\(n\)</span> nos dá a média, porém a média é influênciada por valores que fogem do padrão da amostra sendo o valor grande demais ou muito pequeno ,lembrando que a média pode ou não representar <span class="math inline">\(50\%\)</span> dos dados.</p>
+<p>Seja {n}n o número total de valores e {x_{i}}x_i cada valor, em que {i=1,,n}{i=1,,n}. Média aritmética é a soma dos valores{x_{i}}x_i dividido pelo número total de valores {n}n:</p>
+<p><strong>Formula :</strong>
+<span class="math display">\[\bar{x} = \dfrac{x_1 + \ldots +x_n}{n} = \frac{1}{n}\sum_{i-1}^{n}x_i
+\]</span></p>
 </div>
-<div id="moda" class="section level3" number="1.1.2">
-<h3><span class="header-section-number">1.1.2</span> Moda</h3>
+<div id="mediana" class="section level3" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Mediana</h3>
+<p>O termo “mediana” refere-se a “meio”. Dado um conjunto de informações numéricas, o valor central corresponde à mediana desse conjunto. Dessa forma, é importante que esses valores sejam colocados em ordem, seja crescente ou decrescente. Se houver uma quantidade ímpar de valores numéricos, a mediana será o valor central do conjunto numérico. Se a quantidade de valores for um número par, devemos fazer uma média aritmética dos dois números centrais, e esse resultado será o valor da mediana.</p>
+</div>
+<div id="moda" class="section level3" number="1.1.3">
+<h3><span class="header-section-number">1.1.3</span> Moda</h3>
 <p>A moda é a realização mais frequente em um conjunto de valores. O fenômeno acontece quando, em um banco de dados, há a repetição das informações encontradas em uma mesma variável.</p>
 <p>Uma empresa de Tecnologia da Informação tem 20 funcionários contratados. A maioria deles (15) tem idade entre 20 e 25 anos. O restante (5) está na faixa de 30 e 40 anos. A maior recorrência de idade, no entanto, é de funcionários com 23 anos. São 5 no total — definindo a medida de posição ora apresentada.</p>
 <p>A moda pode ser definida em bimodal (quando ocorre a repetição de dois valores) ou multimodal (mais de dois valores repetidos). O caso dos cinco funcionários com 23 anos identificamos como multimodal.</p>
 </div>
-<div id="quartil" class="section level3" number="1.1.3">
-<h3><span class="header-section-number">1.1.3</span> Quartil</h3>
+<div id="quartil" class="section level3" number="1.1.4">
+<h3><span class="header-section-number">1.1.4</span> Quartil</h3>
 <p>Temos que os Quartis são valores de divisão na qual divide os conjuntado de dados em 4 partes, na qual temos:</p>
 <ol style="list-style-type: decimal">
 <li>Primeiro Quartil divide em <span class="math inline">\(25\%\)</span> em uma amostra ordena os valores inferiores.</li>

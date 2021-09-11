@@ -8,7 +8,21 @@ output:
 
 ## Medidas de Posição
 
+### Média
+
+Em um conjuto de dados temos um número $n$ de valores e a soma total desse conjuto de dados e a sua divisão pelo o valor de $n$ nos dá a média, porém a média é influênciada por valores que fogem do padrão da amostra sendo o valor grande demais ou muito pequeno ,lembrando que a média pode ou não representar $50\%$ dos dados.  
+
+Seja {\displaystyle n}n o número total de valores e {\displaystyle x_{i}}x_i cada valor, em que {\displaystyle i=1,\dots ,n}{\displaystyle i=1,\dots ,n}. Média aritmética é a soma dos valores{\displaystyle x_{i}}x_i dividido pelo número total de valores {\displaystyle n}n:
+
+**Formula :**
+\[\bar{x} = \dfrac{x_1 + \ldots +x_n}{n} = \frac{1}{n}\sum_{i-1}^{n}x_i
+\]
+
 ### Mediana
+
+O termo “mediana” refere-se a “meio”. Dado um conjunto de informações numéricas, o valor central corresponde à mediana desse conjunto. Dessa forma, é importante que esses valores sejam colocados em ordem, seja crescente ou decrescente. Se houver uma quantidade ímpar de valores numéricos, a mediana será o valor central do conjunto numérico. Se a quantidade de valores for um número par, devemos fazer uma média aritmética dos dois números centrais, e esse resultado será o valor da mediana.
+
+
 
 ### Moda
 

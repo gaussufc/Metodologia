@@ -42,3 +42,4 @@ regressão-linear-múltipla
 multivariada
 amostragem
 referências
+média
