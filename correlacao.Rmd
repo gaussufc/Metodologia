@@ -10,11 +10,13 @@ $$
 C = \sqrt{\dfrac{\chi_v^2}{n(l-1)}}
 $$
 onde n representa o número total de observações e l representa o mínimo entre o número de linhas e colunas na tabela de contingência.
-\paragraph{}A partir do valor do coeficiente de Cramér é possível efetuar um teste às hipóteses
-\begin{center} 
-$H_0: $ As variáveis são independentes;
-$H_1: $ As variáveis não são independentes.
-\end{center}
+
+A partir do valor do coeficiente de Cramér é possível efetuar um teste às hipóteses
+\[ \begin{cases}
+H_0:\text{  As variáveis são independentes;} \\
+H_1:\text{  As variáveis não são independentes.}
+\end{cases}
+\]
 
 
 ## Coeficiente de Correlação Ponto Biserial
@@ -26,15 +28,11 @@ Esse coeficiente ($r_{pb}$) mede a correlação entre uma variável quantitativa
 \]
 
 
-> $M_1$= média do grupo que recebeu o valor 1 da variável binária.
->
-> $M_0$= média do grupo que recebeu o valor 0 da variável binária.
->
-> $S_n$= desvio padrão da variável binária toda.
->
-> p= proporção de casos do grupo "0" na variável binária.
->
-> q= proporção de casos do grupo "1" na variável binária.
+- $M_1$ = média do grupo que recebeu o valor 1 da variável binária.
+- $M_0$ = média do grupo que recebeu o valor 0 da variável binária.
+- $S_n$ = desvio padrão da variável binária toda.
+- $p$ = proporção de casos do grupo "0" na variável binária.
+- $q$ = proporção de casos do grupo "1" na variável binária.
 
 
 
@@ -48,23 +46,16 @@ Para facilitar a compreensão, esses coeficientes usualmente variam entre -1 e +
 $$\rho_{(x,y)} = \frac{cov{(x,y)}}{S_{x}S_{y}},$$
 em que ,
 
-> $\text{Cov}{(x,y)}$ - Covariância ou variância conjunta das variáveis X e Y; 
->
->$S_{x} $- Desvio Padrão da variável X
->
-> $S_{Y}$ - Desvio Padrão da variável Y.
->
->  Como dito anteriormente, o $\rho$ pode assumir valores entre -1 e +1 e neste ponto cabe algumas observações, tais como
->
+- $\text{Cov}{(x,y)}$ - Covariância ou variância conjunta das variáveis X e Y; 
+- $S_{x}$- Desvio Padrão da variável X
+- $S_{Y}$ - Desvio Padrão da variável Y.
 
+  Como dito anteriormente, o $\rho$ pode assumir valores entre -1 e +1 e neste ponto cabe algumas observações, tais como
 
+- $\rho_{(x,y)}$ = +1 significa uma correlação positiva perfeita entre as duas variáveis, ou seja, se uma aumenta a outra também aumenta;
+- $\rho_{(x,y)}$ = -1 significa uma correlação negativa perfeita entre as duas variáveis, isto é, se uma aumenta a outra diminui;
+- $\rho_{(x,y)}$ = 0  significa que as duas variáveis não dependem linearmente uma da outra. No entanto, pode existir uma outra dependência "não-linear". Logo, o resultado deve ser investigado por outros meios.
 
- >$\rho_{(x,y)}$ = +1 significa uma correlação positiva perfeita entre as duas variáveis, ou seja, se uma aumenta a outra também aumenta;
-> 
->$\rho_{(x,y)}$ = -1 significa uma correlação negativa perfeita entre as duas variáveis, isto é, se uma aumenta a outra diminui;
->
-> $\rho_{(x,y)}$ = 0  significa que as duas variáveis não dependem linearmente uma da outra. No entanto, pode existir uma outra dependência "não-linear". Logo, o resultado deve ser investigado por outros meios.
->
 
 
 
