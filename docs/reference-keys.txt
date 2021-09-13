@@ -50,3 +50,4 @@ erro-e-atualização-dos-pesos-no-mcp
 multilayer-perceptron-mlp
 algoritmo-back-propagation
 análise-de-componentes-principais
+amostragem-aleatória-simples-sem-reposição---aass

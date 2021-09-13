@@ -77,9 +77,10 @@
 <ul>
 <li class="chapter" data-level="1.1" data-path="análise-descritiva.html"><a href="análise-descritiva.html#medidas-de-posição"><i class="fa fa-check"></i><b>1.1</b> Medidas de Posição</a>
 <ul>
-<li class="chapter" data-level="1.1.1" data-path="análise-descritiva.html"><a href="análise-descritiva.html#mediana"><i class="fa fa-check"></i><b>1.1.1</b> Mediana</a></li>
-<li class="chapter" data-level="1.1.2" data-path="análise-descritiva.html"><a href="análise-descritiva.html#moda"><i class="fa fa-check"></i><b>1.1.2</b> Moda</a></li>
-<li class="chapter" data-level="1.1.3" data-path="análise-descritiva.html"><a href="análise-descritiva.html#quartil"><i class="fa fa-check"></i><b>1.1.3</b> Quartil</a></li>
+<li class="chapter" data-level="1.1.1" data-path="análise-descritiva.html"><a href="análise-descritiva.html#média"><i class="fa fa-check"></i><b>1.1.1</b> Média</a></li>
+<li class="chapter" data-level="1.1.2" data-path="análise-descritiva.html"><a href="análise-descritiva.html#mediana"><i class="fa fa-check"></i><b>1.1.2</b> Mediana</a></li>
+<li class="chapter" data-level="1.1.3" data-path="análise-descritiva.html"><a href="análise-descritiva.html#moda"><i class="fa fa-check"></i><b>1.1.3</b> Moda</a></li>
+<li class="chapter" data-level="1.1.4" data-path="análise-descritiva.html"><a href="análise-descritiva.html#quartil"><i class="fa fa-check"></i><b>1.1.4</b> Quartil</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="análise-descritiva.html"><a href="análise-descritiva.html#medidas-de-dispersão"><i class="fa fa-check"></i><b>1.2</b> Medidas de Dispersão</a></li>
 <li class="chapter" data-level="1.3" data-path="análise-descritiva.html"><a href="análise-descritiva.html#tabela-de-contingência"><i class="fa fa-check"></i><b>1.3</b> Tabela de contingência</a>
@@ -137,8 +138,22 @@
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="regressão.html"><a href="regressão.html#regressão-linear-múltipla"><i class="fa fa-check"></i><b>4.6</b> Regressão Linear Múltipla</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="multivariada.html"><a href="multivariada.html"><i class="fa fa-check"></i><b>5</b> Multivariada</a></li>
-<li class="chapter" data-level="6" data-path="amostragem.html"><a href="amostragem.html"><i class="fa fa-check"></i><b>6</b> Amostragem</a></li>
+<li class="chapter" data-level="5" data-path="multivariada.html"><a href="multivariada.html"><i class="fa fa-check"></i><b>5</b> Multivariada</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="multivariada.html"><a href="multivariada.html#redes-neurais-artificiais"><i class="fa fa-check"></i><b>5.1</b> Redes Neurais Artificiais</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="multivariada.html"><a href="multivariada.html#modelo-mcp"><i class="fa fa-check"></i><b>5.1.1</b> Modelo MCP</a></li>
+<li class="chapter" data-level="5.1.2" data-path="multivariada.html"><a href="multivariada.html#funções-de-ativação"><i class="fa fa-check"></i><b>5.1.2</b> Funções de ativação</a></li>
+<li class="chapter" data-level="5.1.3" data-path="multivariada.html"><a href="multivariada.html#erro-e-atualização-dos-pesos-no-mcp"><i class="fa fa-check"></i><b>5.1.3</b> Erro e Atualização dos pesos no MCP</a></li>
+<li class="chapter" data-level="5.1.4" data-path="multivariada.html"><a href="multivariada.html#multilayer-perceptron-mlp"><i class="fa fa-check"></i><b>5.1.4</b> Multilayer Perceptron (MLP)</a></li>
+<li class="chapter" data-level="5.1.5" data-path="multivariada.html"><a href="multivariada.html#algoritmo-back-propagation"><i class="fa fa-check"></i><b>5.1.5</b> Algoritmo back-propagation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="multivariada.html"><a href="multivariada.html#análise-de-componentes-principais"><i class="fa fa-check"></i><b>5.2</b> Análise de Componentes Principais</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="amostragem.html"><a href="amostragem.html"><i class="fa fa-check"></i><b>6</b> Amostragem</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="amostragem.html"><a href="amostragem.html#amostragem-aleatória-simples-sem-reposição---aass"><i class="fa fa-check"></i><b>6.1</b> Amostragem Aleatória Simples sem reposição - AASs</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i><b>7</b> Referências</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -161,7 +176,48 @@
             <section class="normal" id="section-">
 <div id="amostragem" class="section level1" number="6">
 <h1><span class="header-section-number">Capítulo 6</span> Amostragem</h1>
+<div id="amostragem-aleatória-simples-sem-reposição---aass" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Amostragem Aleatória Simples sem reposição - AASs</h2>
+<p>Para a confecção desse trabalho foi utilizada amostragem aleatória simples sem reposição, uma vez que o espaço amostral era composto por idosos que são acompanhados pelo posto de saúde, ou seja, o mesmo idoso é acompanhado por apenas um posto de saúde.
+Levou-se em consideração que cada idoso poderia ou não ser selecionado, perante isso, utiliza-se na Estatística a distribuição de Bernoulli. Sendo <span class="math inline">\(x_i\)</span> o idoso observado, então:</p>
+<p><span class="math display">\[x_i =
+\begin{cases}
+1,\text{ se o idoso é selecionado para compor a amostra.} \\
+0,\text{ se o idoso não é selecionado para compor amostra.} \\
+\end{cases}
+\]</span></p>
+<p>De acordo com a distribuição assumida, pode-se calcular a variância dos dados por:</p>
+<p><span class="math display">\[\sigma^2 = p(1 - p),\]</span></p>
+<p>em que:</p>
+<p><span class="math inline">\(\sigma^2 =\)</span> Variabilidade dos indivíduos na nossa população;</p>
+<p><span class="math inline">\(p \ \ =\)</span> Proporção de membros da população em estudo que apresenta a característica.</p>
+<p>Como não teve-se acesso a nenhum dado anterior que pudesse estimar a variabilidade dos dados estudados, tais como pesquisas anteriores, optou-se por usar a maior variabilidade possível, denotada na estatística como “variabilidade conservadora”, no qual <span class="math inline">\(p\)</span> assume o valor que maior estima a variância, no caso, 0,5. Daí, segue-se que,</p>
+<p><span class="math display">\[S^2 = p(1 - p) = 0,5(1 - 0,5) = 0,25 = \frac{1}{4},\]</span></p>
+<p>onde <span class="math inline">\(S^2\)</span> é a variância estimada.</p>
+<p>Diante tudo isso, calcula-se o tamanho amostral, denotado por <span class="math inline">\(n\)</span>, através da seguinte expressão:</p>
+<p><span class="math display">\[n = \frac{1}{\frac{D}{S^2}+\frac{1}{N}},\]</span></p>
+<p>em que:</p>
+<p><span class="math inline">\(D \ = \frac{E^2}{Z_\alpha};\)</span></p>
+<p><span class="math inline">\(E \ =\)</span> Erro máximo permitido;</p>
+<p><span class="math inline">\(Z_\alpha =\)</span> Quantil de ordem <span class="math inline">\(\alpha\)</span> da distribuição normal padrão;</p>
+<p><span class="math inline">\(N \ =\)</span> Tamanho populacional;</p>
+<p><span class="math inline">\(S^2 =\)</span> Variância populacional estimada.</p>
+<p>O Erro máximo permitido ou margem de erro é a diferença entre o valor estimado pela pesquisa e o verdadeiro valor. Por exemplo, se retirarmos a média <span class="math inline">\(\mu\)</span> de uma amostra com uma margem de erro de 10% esperamos que a média da população esteja em um intervalo de <span class="math inline">\(\mu - 10\%\)</span> e <span class="math inline">\(\mu + 10\%\)</span>.
+Para estimarmos uma determinada característica de interesse com dada precisão, é importante que estabeleçamos um nível de confiança para nossa pesquisa, nível esse que denotaremos por <span class="math inline">\((1 - \alpha)\)</span>, sendo a probabilidade de que o erro amostral efetivo seja menor do que o erro amostral admitido pela pesquisa (máximo permitido). É importante salientar que um alto nível de confiança pode trazer problemas atrelados a ele, por exemplo, uma necessidade de um maior tamanho amostral.</p>
+<p>Margem de erro, Coeficiente de confiança e tamanho da amostra sempre caminham lado a lado. Modificar qualquer um dos 3 parâmetros, alterará os restantes. Encontra-se algumas mudanças:</p>
+<ul>
+<li>Reduzir a margem de erro obriga a aumentar o tamanho da amostra;</li>
+<li>Diminuir o Coeficiente de confiança obriga a aumentar o tamanho da amostra;</li>
+<li>Se eu aumentar o tamanho da minha amostra, posso reduzir a margem de erro ou incrementar o nível de confiança.</li>
+</ul>
+<p>Existe casos onde o tamanho amostral fica inacessível para o pesquisador devido aos custos gerados, para isto existe um fator de correção para diminuir o tamanho amostral (n), quando <span class="math inline">\(\frac{n}{N} \geq 0,05\)</span>. Segue o novo tamanho amostral:</p>
+<p><span class="math display">\[n_{new} = \frac{n}{1 + \left(\frac{n - 1}{N}\right)}\]</span></p>
+<p>em que:</p>
+<p><span class="math inline">\(n_{new} =\)</span> Novo tamanho amostral com fator de correção;</p>
+<p><span class="math inline">\(\ n \ \ =\)</span> Tamanho amostral sem o fator de correção;</p>
+<p><span class="math inline">\(\ N \ =\)</span> Tamanho da população alvo.</p>
 
+</div>
 </div>
             </section>
 
