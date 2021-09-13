@@ -43,3 +43,10 @@ multivariada
 amostragem
 referências
 média
+redes-neurais-artificiais
+modelo-mcp
+funções-de-ativação
+erro-e-atualização-dos-pesos-no-mcp
+multilayer-perceptron-mlp
+algoritmo-back-propagation
+análise-de-componentes-principais
