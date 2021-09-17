@@ -59,3 +59,7 @@ referências
 circular-pizza
 boxplot-violino
 linhas
+amplitude
+variância
+desvio-padrão
+coeficiente-de-variação

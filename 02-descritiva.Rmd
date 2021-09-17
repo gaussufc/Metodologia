@@ -52,6 +52,45 @@ São utilizados para entender como se comporta os dados em cada quartil correspo
  
 ## Medidas de  Dispersão
 
+
+
+### Amplitude
+
+### Variância
+
+A variância é determinada pela média dos quadrados das diferenças entre cada uma das observações e a média aritmética da amostra. O cálculo é feito com base na seguinte fórmula:
+
+
+- Variancia Amostral
+
+
+- Variância Populacional
+
+\[
+\sigma ^{2}={\frac  {1}{N}}\sum _{{i=1}}^{N}\left(x_{i}-\mu \right)^{2},
+\]
+
+Sendo,
+
+- $\sigma^2$ : variância
+- $x_i$: valor observado
+- $bar(x)$ : média aritmética da amostra
+- n: número de dados observados
+
+
+
+### Desvio Padrão 
+
+
+\[ \sigma(S) = \sqrt{Variância}
+\]
+
+### Coeficiente de Variação
+
+
+\[cv = \dfrac{\sigma}{\bar(x)}
+\]
+
 ## Tabela de contingência
 As tabelas de contingência são usadas para registrar observações independentes de duas ou mais variáveis aleatórias, normalmente qualitativas.
 

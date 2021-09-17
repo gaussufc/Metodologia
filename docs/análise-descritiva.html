@@ -82,7 +82,13 @@
 <li class="chapter" data-level="1.1.3" data-path="análise-descritiva.html"><a href="análise-descritiva.html#moda"><i class="fa fa-check"></i><b>1.1.3</b> Moda</a></li>
 <li class="chapter" data-level="1.1.4" data-path="análise-descritiva.html"><a href="análise-descritiva.html#quartil"><i class="fa fa-check"></i><b>1.1.4</b> Quartil</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="análise-descritiva.html"><a href="análise-descritiva.html#medidas-de-dispersão"><i class="fa fa-check"></i><b>1.2</b> Medidas de Dispersão</a></li>
+<li class="chapter" data-level="1.2" data-path="análise-descritiva.html"><a href="análise-descritiva.html#medidas-de-dispersão"><i class="fa fa-check"></i><b>1.2</b> Medidas de Dispersão</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="análise-descritiva.html"><a href="análise-descritiva.html#amplitude"><i class="fa fa-check"></i><b>1.2.1</b> Amplitude</a></li>
+<li class="chapter" data-level="1.2.2" data-path="análise-descritiva.html"><a href="análise-descritiva.html#variância"><i class="fa fa-check"></i><b>1.2.2</b> Variância</a></li>
+<li class="chapter" data-level="1.2.3" data-path="análise-descritiva.html"><a href="análise-descritiva.html#desvio-padrão"><i class="fa fa-check"></i><b>1.2.3</b> Desvio Padrão</a></li>
+<li class="chapter" data-level="1.2.4" data-path="análise-descritiva.html"><a href="análise-descritiva.html#coeficiente-de-variação"><i class="fa fa-check"></i><b>1.2.4</b> Coeficiente de Variação</a></li>
+</ul></li>
 <li class="chapter" data-level="1.3" data-path="análise-descritiva.html"><a href="análise-descritiva.html#tabela-de-contingência"><i class="fa fa-check"></i><b>1.3</b> Tabela de contingência</a>
 <ul>
 <li class="chapter" data-level="1.3.1" data-path="análise-descritiva.html"><a href="análise-descritiva.html#teste-de-mcnemar"><i class="fa fa-check"></i><b>1.3.1</b> Teste de McNemar</a></li>
@@ -157,9 +163,12 @@
 <li class="chapter" data-level="7" data-path="gráficos.html"><a href="gráficos.html"><i class="fa fa-check"></i><b>7</b> Gráficos</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="gráficos.html"><a href="gráficos.html#barras"><i class="fa fa-check"></i><b>7.1</b> Barras</a></li>
-<li class="chapter" data-level="7.2" data-path="gráficos.html"><a href="gráficos.html#circulapizza"><i class="fa fa-check"></i><b>7.2</b> Circula(Pizza)</a></li>
-<li class="chapter" data-level="7.3" data-path="gráficos.html"><a href="gráficos.html#boxplot"><i class="fa fa-check"></i><b>7.3</b> Boxplot</a></li>
-<li class="chapter" data-level="7.4" data-path="gráficos.html"><a href="gráficos.html#series-temporais"><i class="fa fa-check"></i><b>7.4</b> Series Temporais</a></li>
+<li class="chapter" data-level="7.2" data-path="gráficos.html"><a href="gráficos.html#circular-pizza"><i class="fa fa-check"></i><b>7.2</b> Circular (Pizza)</a></li>
+<li class="chapter" data-level="7.3" data-path="gráficos.html"><a href="gráficos.html#boxplot"><i class="fa fa-check"></i><b>7.3</b> Boxplot</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="gráficos.html"><a href="gráficos.html#boxplot-violino"><i class="fa fa-check"></i><b>7.3.1</b> Boxplot + Violino</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="gráficos.html"><a href="gráficos.html#linhas"><i class="fa fa-check"></i><b>7.4</b> Linhas</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i><b>8</b> Referências</a></li>
 <li class="divider"></li>
@@ -217,6 +226,37 @@
 </div>
 <div id="medidas-de-dispersão" class="section level2" number="1.2">
 <h2><span class="header-section-number">1.2</span> Medidas de Dispersão</h2>
+<div id="amplitude" class="section level3" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Amplitude</h3>
+</div>
+<div id="variância" class="section level3" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Variância</h3>
+<p>A variância é determinada pela média dos quadrados das diferenças entre cada uma das observações e a média aritmética da amostra. O cálculo é feito com base na seguinte fórmula:</p>
+<ul>
+<li><p>Variancia Amostral</p></li>
+<li><p>Variância Populacional</p></li>
+</ul>
+<p><span class="math display">\[
+\sigma ^{2}={\frac  {1}{N}}\sum _{{i=1}}^{N}\left(x_{i}-\mu \right)^{2},
+\]</span></p>
+<p>Sendo,</p>
+<ul>
+<li><span class="math inline">\(\sigma^2\)</span> : variância</li>
+<li><span class="math inline">\(x_i\)</span>: valor observado</li>
+<li><span class="math inline">\(bar(x)\)</span> : média aritmética da amostra</li>
+<li>n: número de dados observados</li>
+</ul>
+</div>
+<div id="desvio-padrão" class="section level3" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Desvio Padrão</h3>
+<p><span class="math display">\[ \sigma(S) = \sqrt{Variância}
+\]</span></p>
+</div>
+<div id="coeficiente-de-variação" class="section level3" number="1.2.4">
+<h3><span class="header-section-number">1.2.4</span> Coeficiente de Variação</h3>
+<p><span class="math display">\[cv = \dfrac{\sigma}{bar(x)}
+\]</span></p>
+</div>
 </div>
 <div id="tabela-de-contingência" class="section level2" number="1.3">
 <h2><span class="header-section-number">1.3</span> Tabela de contingência</h2>
