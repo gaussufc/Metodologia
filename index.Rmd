@@ -1,7 +1,6 @@
 --- 
 title: "Metodologia Gauss"
 subtitle: "Um pouco sobre Estatística"
-author: "Empresa Junior Gauss"
 
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
