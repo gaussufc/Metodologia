@@ -1,5 +1,6 @@
 bem-vindo
 medidas-de-posição
+média
 mediana
 moda
 quartil
@@ -40,9 +41,6 @@ anova-análise-de-variância
 manova
 regressão-linear-múltipla
 multivariada
-amostragem
-referências
-média
 redes-neurais-artificiais
 modelo-mcp
 funções-de-ativação
@@ -50,4 +48,11 @@ erro-e-atualização-dos-pesos-no-mcp
 multilayer-perceptron-mlp
 algoritmo-back-propagation
 análise-de-componentes-principais
+amostragem
 amostragem-aleatória-simples-sem-reposição---aass
+gráficos
+barras
+circulapizza
+boxplot
+series-temporais
+referências
