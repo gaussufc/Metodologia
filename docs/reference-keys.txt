@@ -5,6 +5,10 @@ mediana
 moda
 quartil
 medidas-de-dispersão
+amplitude
+variância
+desvio-padrão
+coeficiente-de-variação
 tabela-de-contingência
 teste-de-mcnemar
 tabela-de-classes
@@ -52,14 +56,8 @@ amostragem
 amostragem-aleatória-simples-sem-reposição---aass
 gráficos
 barras
-circulapizza
-boxplot
-series-temporais
-referências
 circular-pizza
+boxplot
 boxplot-violino
 linhas
-amplitude
-variância
-desvio-padrão
-coeficiente-de-variação
+referências
