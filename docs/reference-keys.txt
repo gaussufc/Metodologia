@@ -56,3 +56,6 @@ circulapizza
 boxplot
 series-temporais
 referências
+circular-pizza
+boxplot-violino
+linhas
